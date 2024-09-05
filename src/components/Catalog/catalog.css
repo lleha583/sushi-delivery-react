@@ -1,0 +1,56 @@
+.catalog {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.catalog h1 {
+    margin: 0;
+}
+
+.catalog p {
+    margin: 10px 0;
+    color: #afafaf;
+}
+
+.block {
+    position: relative;
+    width: 270px;
+    height: 400px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px; 
+}
+
+.block_btn {
+    position: absolute;
+    bottom: 20px;
+    width: 270px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.block_btn_favorite {
+    position: relative;
+    box-sizing: border-box;
+    bottom: -12px;
+    margin: 0 10px;
+    border-radius: 5px;
+    width: 40px;
+    height: 35px;
+    background-color: buttonface;
+}
+
+.block_btn_add {
+    box-sizing: border-box;
+    width: 40px;
+    height: 35px;
+    border: none;
+    background-color: #a7e6a7;
+    border-radius: 5px;
+}
