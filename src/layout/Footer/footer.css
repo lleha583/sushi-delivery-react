@@ -1,0 +1,33 @@
+footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.footer_logo img {
+    width: 200px;
+}
+
+.footer_pages {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer_contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer_timework {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+

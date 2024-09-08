@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
 import Header from './layout/Header/Header'
+import Footer from './layout/Footer/Footer'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <div className='root_children'>
         <Outlet />
       </div>
+      <Footer />
     </>
   )
 }

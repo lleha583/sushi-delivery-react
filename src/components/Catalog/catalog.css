@@ -6,6 +6,10 @@
     flex-wrap: wrap;
 }
 
+.catalog_name {
+    font-size: 50px;
+}
+
 .catalog h1 {
     margin: 0;
 }
@@ -22,6 +26,12 @@
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px; 
+}
+
+.block_info {
+    height: 110px;
+    overflow: hidden;
+
 }
 
 .block_btn {

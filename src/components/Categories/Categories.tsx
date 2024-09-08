@@ -20,6 +20,7 @@ export default function Categories() {
                 <li onClick={()=> {changeActive(1)}} className={active === 1 ? 'active' : ''}>Суши и роллы</li>
                 <li onClick={()=> {changeActive(2)}} className={active === 2 ? 'active' : ''}>Напитки</li>
                 <li onClick={()=> {changeActive(3)}} className={active === 3 ? 'active' : ''}>Соусы</li>
+                <li onClick={()=> {changeActive(3)}} className={active === 4 ? 'active' : ''}>Сеты</li>
             </ul>
         </section>
     )
