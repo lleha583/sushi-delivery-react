@@ -1,0 +1,34 @@
+[
+    {
+      "id": 0,
+      "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/3ad/480_372_2/nw6ys7phb8nfuzgmz0ze5eej7nny3k6v.jpg?167769819242489",
+      "title": "Фанта апельсин",
+      "body": "Фанта апельсин 450 мл",
+      "price": 3.20, 
+      "weight": 450
+    },
+    {
+        "id": 1,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/277/254_197_2/b28jc17bgnrwgnjyojumrxry0c41nza2.jpg?167767522716980",
+        "title": "Кока-кола ",
+        "body": "Кока-кола  450 мл",
+        "price": 3.40, 
+        "weight": 450
+    },
+    {
+        "id": 2,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/ad7/254_197_2/cesp1iyqiaotz3c2qty5iim3cns3fise.jpg?17231312339395",
+        "title": "Бонаква негазированная",
+        "body": "Bonaqua питьевая негазированная  450 мл",
+        "price": 2.10, 
+        "weight": 450
+    },
+    {
+        "id": 3,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/ad7/480_372_2/cesp1iyqiaotz3c2qty5iim3cns3fise.jpg?172314062825661",
+        "title": "Спрайт",
+        "body": "Спрайт  450 мл",
+        "price": 3.00, 
+        "weight": 450
+    }
+  ]

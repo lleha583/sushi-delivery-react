@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Main from "../pages/Main/Main";
 import CatalogPage from "../pages/CatalogPage.tsx/CatalogPage";
+import News from "../pages/News/News";
+import DeliveryPage from "../pages/Delivery/DeliveryPage";
 
 export const route  = createBrowserRouter([
     {
@@ -13,8 +15,16 @@ export const route  = createBrowserRouter([
                 element: <Main />
             },
             {
-                path: '/:category',
+                path: ':category',
                 element: <CatalogPage />
+            },
+            {
+                path: 'news',
+                element: <News />
+            },
+            {
+                path: 'delivery',
+                element: <DeliveryPage />
             }
         ]
     }

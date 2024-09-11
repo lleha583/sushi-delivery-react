@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Categories from "../../layout/Categories/Categories";
+import Categories from "../../components/Categories/Categories";
 import Catalog from "../../components/Catalog/Catalog";
 
 export default function CatalogPage() {

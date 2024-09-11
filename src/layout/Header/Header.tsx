@@ -6,6 +6,7 @@ import iconUser from '../../assets/icons/icon_user.svg'
 import iconBasket from '../../assets/icons/icon_basket.svg'
 
 import './header.css'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
     return (
@@ -14,10 +15,10 @@ export default function Header() {
                 <img src={logo} width='100px' />
             </div>
             <nav className="header_navigation">
-                <a>Главная</a>
-                <a>Доставка</a>
-                <a>О нас</a>
-                <a>Новости</a>
+                <Link to={'/'}>Главная</Link>
+                <Link to={'delivery'}>Доставка</Link>
+                <Link to={'/'}>О нас</Link>
+                <Link to={'news'}>Новости</Link>
             </nav>
             <div className="header_contacts">
                 <img src={iconPhone} alt="" />

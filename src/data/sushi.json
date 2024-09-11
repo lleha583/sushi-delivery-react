@@ -1,0 +1,66 @@
+[
+    {
+      "id": 0,
+      "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/4a7/480_372_2/izi3lpisk4c48x91w0huyfm3tc9tjit6.png?1723140624205316",
+      "title": "Эвергрин ролл",
+      "body": "Рис, нори, соус Фьюжн, сливочный сыр, угорь, груша, салат айсберг",
+      "price": 17.90, 
+      "weight": 225
+    },
+    {
+        "id": 1,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/6a4/480_372_2/hexarhsfg28iz7nb90tab8l0cluapgci.jpg?170450280092992",
+        "title": "Филадельфия татаки",
+        "body": "Филе лосося, сливочный сыр, огурец, соус Терияки.",
+        "price": 12.90, 
+        "weight": 220
+    },
+    {
+        "id": 2,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/a01/480_372_2/n55mtumzrntn31l8869ccxvv7zbaeb6r.jpg?172314065192578",
+        "title": "Бонито ролл",
+        "body": "Рис, нори, лосось жареный, сливочный сыр, авокадо, хлопья копчёного тунца.",
+        "price": 18.50, 
+        "weight": 195
+    },
+    {
+        "id": 3,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/4a7/480_372_2/gf584nb28atiz3eqbwa8sd59fsh1i5hx.jpg?1723140658105351",
+        "title": "Грин ролл",
+        "body": "Рис, нори, окунь маринованный, лосось, сливочный сыр, водоросли Чука.",
+        "price": 18.90, 
+        "weight": 220
+    },
+    {
+        "id": 4,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/6dc/480_372_2/9v8ivq8rtte3f9hyzrn0aytl1ddg0zb6.jpg?172314062792467",
+        "title": "Фламинго ролл",
+        "body": "Рис, нори, копченая форель, креветка в темпуре, сливочный сыр, манго, соус Спайси.",
+        "price": 26.90, 
+        "weight": 260 
+    },
+    {
+        "id": 5,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/6dc/480_372_2/9v8ivq8rtte3f9hyzrn0aytl1ddg0zb6.jpg?172314062792467",
+        "title": "Ролл с томатами",
+        "body": "Рис, нори, соевая спаржа в кляре, томат, салат Айсберг, кунжут, сладкий соус Чили",
+        "price": 12.90, 
+        "weight": 260 
+    },
+    {
+        "id": 6,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/22f/254_197_2/7btcka43g94jftymeux3y3971ln8lxtu.jpg?172312216238561",
+        "title": "Ролл с опаленным лососем и креветкой",
+        "body": "Рис, нори, соевая спаржа в кляре, томат, салат Айсберг, кунжут, сладкий соус Чили",
+        "price": 24.90, 
+        "weight": 270 
+    },
+    {
+        "id": 7,
+        "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/410/480_372_2/c4dsmxmno0h764sh5u3vp9aa2gfqma8t.jpg?169970789891109",
+        "title": "Монреаль",
+        "body": "Жареный лосось в соусе Терияки, сливочный сыр, салат Айсберг, сыр чеддер, лук жареный.",
+        "price": 16.99, 
+        "weight": 225
+    }
+  ]
