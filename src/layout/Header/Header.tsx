@@ -17,7 +17,7 @@ export default function Header() {
             <nav className="header_navigation">
                 <Link to={'/'}>Главная</Link>
                 <Link to={'delivery'}>Доставка</Link>
-                <Link to={'/'}>О нас</Link>
+                <Link to={'about'}>О нас</Link>
                 <Link to={'news'}>Новости</Link>
             </nav>
             <div className="header_contacts">

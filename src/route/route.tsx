@@ -4,6 +4,7 @@ import Main from "../pages/Main/Main";
 import CatalogPage from "../pages/CatalogPage.tsx/CatalogPage";
 import News from "../pages/News/News";
 import DeliveryPage from "../pages/Delivery/DeliveryPage";
+import About from "../pages/About/About";
 
 export const route  = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ export const route  = createBrowserRouter([
             {
                 path: 'delivery',
                 element: <DeliveryPage />
+            },
+            {
+                path: 'about',
+                element: <About />
             }
         ]
     }

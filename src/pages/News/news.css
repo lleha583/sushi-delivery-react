@@ -1,0 +1,34 @@
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.post__inner {
+    width: 380px;
+    height: 390px;
+    background-color: white;
+    position: relative;
+    border-radius: 15px;
+}
+
+.post__inner img {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.post__inner_content {
+    padding: 10px 20px;
+}
+
+.post__inner h3 {
+    font-size: 25px;
+    margin: 10px 0 20px;
+}
+
+.post__inner span {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
