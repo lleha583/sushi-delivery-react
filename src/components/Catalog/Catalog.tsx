@@ -17,20 +17,20 @@ export default function Catalog({ value }: { value: string }) {
         //     .then(response=>console.log(response))
 
         switch (value) {
-            case "суши и роллы":
+            case "sushi":
                 setFoodList([...sushi])
                 break;
-            case "напитки":
+            case "drinks":
                 setFoodList([...drinks])
                 break;
-            case "соусы":
+            case "souce":
                 setFoodList([...souce])
                 break;
-            case "сеты":
+            case "sets":
                 setFoodList([...sets])
                 break;
             }
-    }, [])
+    }, [value])
 
 
     return (
