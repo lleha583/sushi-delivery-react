@@ -1,18 +1,21 @@
-import { useParams } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Categories from "../../components/Categories/Categories";
-import Catalog from "../../components/Catalog/Catalog";
 
 export default function CatalogPage() {
 
-
-    const params = useParams()
-    console.log(params)
-    const value: string = params.category
-
+    const location = useLocation()
+    console.log(location)
+    if (location.pathname !== "/category") {
+        return (
+            <>
+                <Categories />
+                <Outlet />
+            </>
+        )
+    }
     return (
         <>
-            <Categories />
-            <Catalog value={value} />
+            <h1>category</h1>
         </>
     )
 }

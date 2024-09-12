@@ -27,7 +27,9 @@ export default function Header() {
             <div className="header_user">
                 <img className='header_user_link' src={iconNotification} alt="" />
                 <img className='header_user_link' src={iconFavorite} alt="" />
-                <img className='header_user_link' src={iconUser} alt="" />
+                <Link to={'user'}>
+                    <img className='header_user_link' src={iconUser} alt="" />
+                </Link>
                 <div className='header_user_link'>
                     <a>Корзина</a>
                     <img src={iconBasket} alt="" />

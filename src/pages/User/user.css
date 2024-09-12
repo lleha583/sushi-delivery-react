@@ -1,0 +1,36 @@
+.user {
+    display: flex;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+.user_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user_nav img {
+    width: 40px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.user_nav a {
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.user_children {
+    width: 950px;
+}
+
+.user_active {
+    background-color: orange;
+}
