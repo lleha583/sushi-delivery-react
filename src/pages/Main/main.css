@@ -1,0 +1,50 @@
+.main_category {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.main_category_path {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.main_category img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.main_category div {
+    width: 600px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.main_category_path p {
+    z-index: 2;    
+    padding: 10px;
+    margin: 0;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+.main_category div:hover {
+    color: orange;
+}
+
+.main_btn_catalog {
+    padding: 10px 200px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.main_btn_catalog:hover {
+    background-color: #f3b646;
+    color: white;
+}

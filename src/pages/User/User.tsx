@@ -5,18 +5,21 @@ import favorite from '../../assets/icons/icon_favorite.svg'
 import adress from '../../assets/icons/icon_map-point.svg'
 import theme from '../../assets/icons/icon_theme.svg'
 import { useState } from "react";
+import iconUser from '../../assets/icons/icon_user.svg'
 
 export default function User() {
 
-    console.log('update')
-    const [active, setActive] = useState<number | null>(null)
-
-
-    const changeActive = (num: number): void => {
-            setActive(num)
-
+    const userInfo = {
+        name: 'lleha583',
+        email: null,
+        number: 1234567890
     }
 
+    const [active, setActive] = useState<number | null>(null)
+
+    const changeActive = (num: number): void => {
+        setActive(num)
+    }
 
     return (
         <section className="user">
@@ -38,7 +41,12 @@ export default function User() {
                     <p>Тема сайта</p>
                 </Link>
                 <div className="user_status">
-
+                    <img src={iconUser} />
+                    <div>
+                        <h3>{userInfo.name}</h3>
+                        <p>{(userInfo.email && userInfo.email)}</p>
+                        <span>+{userInfo.number}</span>
+                    </div>
                 </div>
             </nav>
 

@@ -1,0 +1,13 @@
+.user_adress {
+    display: flex;
+    align-items: center;
+    height: 340px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.user_adress img {
+    height: 200px;
+    padding: 0 100px;
+    background-color: white;
+}

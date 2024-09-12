@@ -1,11 +1,15 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './categories.css'
 import { Link } from 'react-router-dom'
 
-export default function Categories() {
+export default function Categories({category}: {category?: number}) {
 
     const [active, setActive] = useState<number | null>(null)
 
+    useEffect(()=>{
+        if(category === undefined) return 
+        setActive(category)
+    }, [])
 
     const changeActive = (num: number): void => {
         if(num === active) {
@@ -13,18 +17,16 @@ export default function Categories() {
         } else {
             setActive(num)
         }
-
     }
 
-    
     return (
         <section>
-            <ul className="categories">
-                <Link to={'/category/sushi'} onClick={()=> {changeActive(1)}} className={active === 1 ? 'active' : ''}>Суши и роллы</Link>
-                <Link to={'/category/drinks'} onClick={()=> {changeActive(2)}} className={active === 2 ? 'active' : ''}>Напитки</Link>
-                <Link to={'/category/souce'} onClick={()=> {changeActive(3)}} className={active === 3 ? 'active' : ''}>Соусы</Link>
-                <Link to={'/category/sets'} onClick={()=> {changeActive(4)}} className={active === 4 ? 'active' : ''}>Сеты</Link>
-            </ul>
+            <div className="categories">
+                <Link to={'/catalog/sushi'} onClick={()=> {changeActive(1)}} className={active === 1 ? 'active' : ''}>Суши и роллы</Link>
+                <Link to={'/catalog/drinks'} onClick={()=> {changeActive(2)}} className={active === 2 ? 'active' : ''}>Напитки</Link>
+                <Link to={'/catalog/souce'} onClick={()=> {changeActive(3)}} className={active === 3 ? 'active' : ''}>Соусы</Link>
+                <Link to={'/catalog/sets'} onClick={()=> {changeActive(4)}} className={active === 4 ? 'active' : ''}>Сеты</Link>
+            </div>
         </section>
     )
 }

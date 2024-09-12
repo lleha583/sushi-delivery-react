@@ -1,0 +1,24 @@
+.category_path {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category_path_block {
+    width: 320px;
+    border-radius: 15px;
+    background-color: #e6e6e6;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.category_path_block:hover {
+    color: orange;
+}
+
+.category_path_block img {
+    margin: 0 5%;
+    border-radius: 15px;
+}
+

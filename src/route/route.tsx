@@ -10,7 +10,7 @@ import Favorite from "../pages/User/Favorite/Favorite";
 import Adress from "../pages/User/Adress/Adress";
 import History from "../pages/User/History/History";
 import Theme from "../pages/User/Theme/Theme";
-import CatalogList from "../pages/CatalogPage.tsx/CatalogList/CatalogList";
+import CatalogList from "../pages/CatalogList/CatalogList";
 
 export const route  = createBrowserRouter([
     {
@@ -22,14 +22,12 @@ export const route  = createBrowserRouter([
                 element: <Main />
             },
             {
-                path: 'category',
+                path: 'catalog',
                 element: <CatalogPage />,
-                children: [
-                    {
-                        path: ':category',
-                        element: <CatalogList />
-                    }
-                ]
+            },
+            {
+                path: 'catalog/:category',
+                element: <CatalogList />
             },
             {
                 path: 'news',
