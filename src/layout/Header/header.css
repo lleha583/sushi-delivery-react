@@ -1,5 +1,15 @@
 header {
-    max-width: 1200px;
+    margin: 0;
+    position: absolute;
+    width: 99%;
+    top: 10px;
+    z-index: 5;
+}
+
+.header__inner {
+    min-width: 800px;
+    width: 1200px;
+    margin: 0 aouto;
     height: 60px;
     margin: 10px auto;
     padding: 0 15px;
@@ -37,4 +47,10 @@ header {
     border-radius: 10px;
     align-items: center;
     gap: 5px;
+}
+
+.active {
+    color: white;
+    background-color: orange;
+    fill: orange;
 }

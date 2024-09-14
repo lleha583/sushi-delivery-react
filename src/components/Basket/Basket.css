@@ -1,0 +1,43 @@
+.basket {
+    margin: 90px auto;
+    transform: translate(103%, 0);
+    width: 400px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    height: 600px;
+}
+
+.basket_header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.basket_header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.basket_header button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.basket_block {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+}
+
+.basket_empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}

@@ -1,13 +1,15 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import "./user.css";
 import history from '../../assets/icons/icon_history.svg'
 import favorite from '../../assets/icons/icon_favorite.svg'
 import adress from '../../assets/icons/icon_map-point.svg'
 import theme from '../../assets/icons/icon_theme.svg'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import iconUser from '../../assets/icons/icon_user.svg'
 
 export default function User() {
+
+    const location = useLocation()
 
     const userInfo = {
         name: 'lleha583',
@@ -16,6 +18,10 @@ export default function User() {
     }
 
     const [active, setActive] = useState<number | null>(null)
+
+    useEffect(()=> {
+        if(location.state !== null) return setActive(location.state)
+    }, [])
 
     const changeActive = (num: number): void => {
         setActive(num)

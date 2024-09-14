@@ -18,7 +18,7 @@ export default function News() {
             {
                 newsList.map((item: any)=> {
                     return (
-                        <div className="post__inner">
+                        <div className="post__inner" key={item.id}>
                             <img src={item.img} />
                             <div className="post__inner_content">
                                 <h3>{item.title}</h3>

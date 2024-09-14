@@ -4,8 +4,6 @@ import Header from './layout/Header/Header'
 import Footer from './layout/Footer/Footer'
 
 function App() {
-  console.log('update app')
-
 
   return (
     <>

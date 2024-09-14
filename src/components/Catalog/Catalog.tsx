@@ -40,7 +40,7 @@ export default function Catalog({ value }: { value: string }) {
                 {
                     foodList.map((item: any) => {
                         return (
-                            <div className="block">
+                            <div className="block" key={item.id}>
                                 <div className="block_image">
                                     <img src={item.imageUrl} width='100%' />
                                 </div>
