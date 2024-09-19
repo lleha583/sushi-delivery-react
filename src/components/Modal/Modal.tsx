@@ -1,7 +1,7 @@
 import { createPortal } from "react-dom";
 import './modal.css'
 
-export default function Modal({ children, setModal }:{children: React.ReactNode, setModal: any}) {
+export default function Modal({ children, setModal }:{children: React.ReactNode, setModal: (modal: null | number) => void}) {
 
     console.log('modal')
 

@@ -1,6 +1,10 @@
 import Modal from "../Modal/Modal";
 
-export default function Notifications({ setModal }: any) {
+type TProps = {
+    setModal: (value: number | null) => void
+}
+
+export default function Notifications({ setModal }: TProps) {
     return (
         <Modal setModal={setModal}>
             <div onClick={(e)=>{e.stopPropagation()}} className="notifications">

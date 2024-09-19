@@ -5,17 +5,19 @@ import sushi from '../../data/sushi.json';
 import drinks from '../../data/drinks.json';
 import souce from '../../data/souce.json';
 import sets from '../../data/sets.json';
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../store/basketSlice";
+import { IProduct } from "../../interface/interface";
 
 
 export default function Catalog({ value }: { value: string }) {
 
-    const [foodList, setFoodList] = useState<any>([...sushi])
+    const dispath = useDispatch()
+
+    const [foodList, setFoodList] = useState<IProduct[]>([...sushi])
 
     useEffect(() => {
-        //     fetch('mongodb://localhost:27017/delivery/catalog')
-        //     .then(value=>value.json())
-        //     .then(response=>console.log(response))
-
         switch (value) {
             case "sushi":
                 setFoodList([...sushi])
@@ -32,15 +34,15 @@ export default function Catalog({ value }: { value: string }) {
             }
     }, [value])
 
-
     return (
         <section>
             <h1 className="catalog_name">{value}</h1>
             <div className="catalog">
                 {
-                    foodList.map((item: any) => {
+                    foodList.map((item: IProduct) => {
                         return (
-                            <div className="block" key={item.id}>
+                            <div className="block" key={item.id} >
+                                <Link to={`/catalog/${value}/${item.name}`}>
                                 <div className="block_image">
                                     <img src={item.imageUrl} width='100%' />
                                 </div>
@@ -48,19 +50,18 @@ export default function Catalog({ value }: { value: string }) {
                                     <h1>{item.title}</h1>
                                     <p>{item.body}</p>
                                 </div>
+                                </Link>
                                 <div className="block_btn">
                                     <h1>{item.price}p.</h1>
                                     <div>
                                         <img className="block_btn_favorite" src={iconFaforite} />
-                                        <button className="block_btn_add">+</button>
+                                        <button className="block_btn_add" onClick={()=> {dispath(addProduct(item))}}>+</button>
                                     </div>
                                 </div>
                             </div>
                         )
                     })
                 }
-
-
             </div>
         </section>
     )

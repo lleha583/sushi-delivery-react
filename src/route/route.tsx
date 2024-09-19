@@ -11,6 +11,7 @@ import Adress from "../pages/User/Adress/Adress";
 import History from "../pages/User/History/History";
 import Theme from "../pages/User/Theme/Theme";
 import CatalogList from "../pages/CatalogList/CatalogList";
+import Product from "../pages/Product/Product";
 
 export const route  = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ export const route  = createBrowserRouter([
             {
                 path: 'catalog/:category',
                 element: <CatalogList />
+            },
+            {
+                path: 'catalog/:category/:product',
+                element: <Product />
             },
             {
                 path: 'news',

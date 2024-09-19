@@ -58,7 +58,7 @@
 
 .block_btn_add {
     box-sizing: border-box;
-    width: 40px;
+    padding: 5px 15px;
     height: 35px;
     border: none;
     background-color: #a7e6a7;
