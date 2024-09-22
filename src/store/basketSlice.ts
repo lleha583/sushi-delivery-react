@@ -6,6 +6,18 @@ export const basketSlice = createSlice({
     initialState: [] as IBasket[],
     reducers: {
         addProduct: (state, action) => {
+            let value = false
+
+            state.forEach((item: IBasket)=> {
+                if(item.name === action.payload.title) {
+                    value = true
+                    const result = (summ: number) => { return (Math.round(summ * 100) / 100)}
+
+                    item.price = result(item.price + item.startPrice)
+                    item.quantity++
+                }})
+
+            if(value) return;
 
             state.push({
                 name: action.payload.title,
@@ -19,7 +31,6 @@ export const basketSlice = createSlice({
             state.forEach((item: IBasket, index: number)=> {
 
                 if(index === action.payload) {
-
                     const result = (summ: number) => { return (Math.round(summ * 100) / 100)}
 
                     item.price = result(item.price + item.startPrice)
@@ -30,8 +41,8 @@ export const basketSlice = createSlice({
         minusProduct: (state, action) => {
 
             state.forEach((item: IBasket, index: number)=> {
-                if(index === action.payload) {
 
+                if(index === action.payload) {
                     if(item.quantity === 1) return
 
                     const result = (summ: number) => { return (Math.round(summ * 100) / 100)}

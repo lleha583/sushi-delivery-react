@@ -8,6 +8,7 @@ import './header.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Basket from '../../components/Basket/Basket'
+import Modal from '../../components/Modal/Modal'
 import Notifications from '../../components/Notifications/Notifications'
 
 export default function Header() {
@@ -55,10 +56,16 @@ export default function Header() {
             </div>
             </div>
             {
-                (modal === 1 && <Notifications setModal={setModal} />)
+                (modal === 1 && 
+                <Modal setModal={setModal}>
+                    <Notifications setModal={setModal} />
+                </Modal>)
             }
             {
-                (modal === 2 && <Basket setModal={setModal} />)
+                (modal === 2 && 
+                <Modal setModal={setModal}>
+                    <Basket setModal={setModal} />
+                </Modal>)
             }
         </header>
     )

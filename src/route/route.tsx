@@ -12,6 +12,7 @@ import History from "../pages/User/History/History";
 import Theme from "../pages/User/Theme/Theme";
 import CatalogList from "../pages/CatalogList/CatalogList";
 import Product from "../pages/Product/Product";
+import Checkout from "../pages/Checkout/Checkout";
 
 export const route  = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ export const route  = createBrowserRouter([
             {
                 path: 'catalog/:category/:product',
                 element: <Product />
+            },
+            {
+                path: 'checkout',
+                element: <Checkout />
             },
             {
                 path: 'news',

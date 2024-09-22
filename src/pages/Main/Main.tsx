@@ -4,12 +4,14 @@ import Catalog from "../../components/Catalog/Catalog"
 import Delivery from "../../components/Delivery/Delivery"
 import imgSets from '../../assets/img/catalog_sets.jpg'
 import imgDrinks from '../../assets/img/catalog_drinks.jpg'
+import Carusel from "../../components/Carusel/Carucel"
 
 export default function Main() {
 
 
     return (
         <div className="main">
+            <Carusel />
             <section className="main_category">
                 <div className="main_category_path">
                     <Link to={"/catalog/sets"} state={4}>

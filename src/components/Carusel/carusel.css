@@ -1,0 +1,55 @@
+.carusel {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+}
+
+.carusel__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .carusel__inner img {
+    border-radius: 15px;
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carusel__inner img.active {
+    opacity: 1;
+  }
+  
+
+.carusel_points {
+    width: 120px;
+    height: 30px;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.point_active {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffffa1;
+    border-radius: 100%;
+    transition: 0.3s;
+}

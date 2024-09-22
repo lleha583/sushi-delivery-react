@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../store/basketSlice";
 import { IProduct } from "../../interface/interface";
+import PopupNotifications from "../Notifications/PopupNotifications";
 
 
 export default function Catalog({ value }: { value: string }) {
@@ -16,6 +17,16 @@ export default function Catalog({ value }: { value: string }) {
     const dispath = useDispatch()
 
     const [foodList, setFoodList] = useState<IProduct[]>([...sushi])
+    const [notification, setNotification] = useState<boolean>(false)
+    
+
+    const setNewProduct = (item: IProduct) => {
+
+        dispath(addProduct(item))
+
+        setNotification(true)
+        setTimeout(()=> {setNotification(false)}, 4000)
+    }
 
     useEffect(() => {
         switch (value) {
@@ -55,7 +66,7 @@ export default function Catalog({ value }: { value: string }) {
                                     <h1>{item.price}p.</h1>
                                     <div>
                                         <img className="block_btn_favorite" src={iconFaforite} />
-                                        <button className="block_btn_add" onClick={()=> {dispath(addProduct(item))}}>+</button>
+                                        <button className="block_btn_add" onClick={()=> {setNewProduct(item)}}>+</button>
                                     </div>
                                 </div>
                             </div>
@@ -63,6 +74,9 @@ export default function Catalog({ value }: { value: string }) {
                     })
                 }
             </div>
+            {
+                (notification && <PopupNotifications>Добаслено в корзину</PopupNotifications>)
+            }
         </section>
     )
 }

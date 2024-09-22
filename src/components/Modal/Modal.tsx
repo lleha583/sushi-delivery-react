@@ -3,13 +3,12 @@ import './modal.css'
 
 export default function Modal({ children, setModal }:{children: React.ReactNode, setModal: (modal: null | number) => void}) {
 
-    console.log('modal')
-
 
     const docModal = document.getElementById('modal') as HTMLDivElement
 
     return (createPortal(
         <div onClick={()=>{setModal(null)}} className="modal_background">
+
             {children}
         </div>,
         docModal
