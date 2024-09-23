@@ -1,12 +1,13 @@
 .user_favorite {
     display: flex;
+    width: 920px;
     align-items: center;
-    height: 340px;
     background-color: white;
     border-radius: 15px;
+    flex-wrap: wrap;
 }
 
-.user_favorite img {
+.user_favorite_empty {
     height: 200px;
     padding: 0 100px;
     background-color: white;

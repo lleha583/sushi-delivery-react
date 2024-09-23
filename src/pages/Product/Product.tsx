@@ -2,12 +2,26 @@
 import './product.css';
 import sushi from '../../data/sushi.json';
 import iconFaforite from '../../assets/icons/icon_favorite.svg'
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../store/basketSlice';
+import { useState } from 'react';
+import { IProduct } from '../../interface/interface';
+import PopupNotifications from '../../components/Notifications/PopupNotifications';
 
 
 export default function Product() {
 
+    const dispath = useDispatch()
+    const [product, setProduct] = useState<IProduct>({...sushi[0]})
+    const [notification, setNotification] = useState<null | "basket" | "favorite">(null)
 
-    //const params = useParams()
+    const setNewProduct = (item: IProduct) => {
+
+        dispath(addProduct(item))
+
+        setNotification("basket")
+        setTimeout(()=> {setNotification(null)}, 4000)
+    }
 
     return (
         <>
@@ -16,19 +30,22 @@ export default function Product() {
                     <img src={sushi[1].imageUrl} />
                 </div>
                 <div className="product_info">
-                    <h1 className="product_info_title">{sushi[1].title}</h1>
+                    <h1 className="product_info_title">{product.title}</h1>
                     <p className="product_info_body">состав:</p>
-                    <p className="product_info_body">{sushi[1].body}</p>
+                    <p className="product_info_body">{product.body}</p>
                     <p className="product_info_weight">вес:</p>
-                    <p className="product_info_weight">{sushi[1].weight}г.</p>
+                    <p className="product_info_weight">{product.weight}г.</p>
                     <div className="product_info_btn">
-                        <p className='product_info_price'>{sushi[1].price}р.</p>
+                        <p className='product_info_price'>{product.price}р.</p>
                         <div>
                             <img className="block_btn_favorite" src={iconFaforite} />
-                            <button className='block_btn_add'>В козину</button>
+                            <button onClick={()=>{setNewProduct(product)}} className='block_btn_add'>В козину</button>
                         </div>
                     </div>
                 </div>
+                {
+                    (notification && <PopupNotifications status={'basket'} />)
+                }
             </section>
         </>
     )

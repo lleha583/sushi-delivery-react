@@ -19,7 +19,7 @@ export interface IUser {
     name: string,
     email: string,
     number: string,
-    favorite: string[],
+    favorite: number[],
     adress:string
 }
 
