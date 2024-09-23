@@ -63,7 +63,7 @@ export default function Basket({ setModal }: TProps) {
                     }
                     </div>
                     {
-                        (basket.length !== 0 &&
+                        ((basket.length !== 0 && setModal !== undefined) &&
                         <div onClick={()=> {if (setModal !== undefined) setModal(null)}} className='basket_bottom'>
                             <Link to={'checkout'} className='basket_btn_get'>оформить заказ</Link>
                         </div>)

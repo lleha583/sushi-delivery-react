@@ -7,7 +7,7 @@ export default function CheckoutForm() {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const [delivery, setDelivery] = useState(0);
-    const [pay, setPay] = useState(0)
+    const [pay, setPay] = useState(0);
 
     return (
         <div className="checkoutform">
