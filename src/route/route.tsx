@@ -2,9 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Main from "../pages/Main/Main";
 import CatalogPage from "../pages/CatalogPage.tsx/CatalogPage";
-import News from "../pages/News/News";
-import DeliveryPage from "../pages/Delivery/DeliveryPage";
-import About from "../pages/About/About";
+import DeliveryPage from "../pages/Delivery/DeliveryPage";;
 import User from "../pages/User/User";
 import Favorite from "../pages/User/Favorite/Favorite";
 import Adress from "../pages/User/Adress/Adress";
@@ -13,6 +11,10 @@ import Theme from "../pages/User/Theme/Theme";
 import CatalogList from "../pages/CatalogList/CatalogList";
 import Product from "../pages/Product/Product";
 import Checkout from "../pages/Checkout/Checkout";
+import { lazy, Suspense } from "react";
+
+const News = lazy(() => {return import("../pages/News/News");})
+const About = lazy(() => {return import("../pages/About/About");})
 
 export const route  = createBrowserRouter([
     {
@@ -20,7 +22,7 @@ export const route  = createBrowserRouter([
         element: <App />,
         children: [
             {
-                path: '/',
+                index: true,
                 element: <Main />
             },
             {
@@ -41,7 +43,7 @@ export const route  = createBrowserRouter([
             },
             {
                 path: 'news',
-                element: <News />
+                element: <Suspense><News /></Suspense>,
             },
             {
                 path: 'delivery',
@@ -49,7 +51,7 @@ export const route  = createBrowserRouter([
             },
             {
                 path: 'about',
-                element: <About />
+                element: <Suspense><About /></Suspense>
             },
             {
                 path: 'user',

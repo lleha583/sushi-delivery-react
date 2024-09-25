@@ -1,9 +1,9 @@
 import imgFavorite from '../../../assets/img/user_favorite.png';
 import './favorite.css';
 import sets from '../../../data/sets.json'
-import { useDispatch, useSelector } from 'react-redux';
-import { IBasket, IProduct, IUser } from '../../../interface/interface';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { IProduct } from '../../../interface/interface';
+import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { addProduct } from '../../../store/basketSlice';
 import PopupNotifications from '../../../components/Notifications/PopupNotifications';
@@ -11,7 +11,7 @@ import iconFavorite from '../../../assets/icons/icon_favorite.svg';
 
 export default function Favorite() {
 
-    const favorite = useSelector((state: { user: IUser, basket: IBasket }) => { return state.user.favorite })
+    const favorite = useLocation().state
     const dispath = useDispatch()
 
     const [notification, setNotification] = useState(false)
@@ -24,7 +24,6 @@ export default function Favorite() {
         setTimeout(()=> {setNotification(false)}, 4000)
     }
 
-    console.log(favorite)
 
     return (
         <div className='user_favorite'>
@@ -38,7 +37,7 @@ export default function Favorite() {
                         </div>
                     </>
                 ) : (
-                    favorite.map((item)=> {
+                    favorite.map((item: number)=> {
                         return (
                             <div className="block" key={item} >
                                 <Link to={`/catalog/${sets[item].title}/${sets[item].name}`}>

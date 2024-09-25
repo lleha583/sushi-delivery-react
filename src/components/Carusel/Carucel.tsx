@@ -39,7 +39,7 @@ export default function Carusel() {
                         slides.map((item, index)=> {
                             return (
                                 <div className={(index === currentIndex) ? 'point' : 'point_active'}
-                                onClick={()=> {setCurrentIndex(index)}} ></div>
+                                onClick={()=> {setCurrentIndex(index)}} key={index}></div>
                             )
                         })
                     }

@@ -2,7 +2,7 @@ import './Basket.css'
 import empty from '../../assets/img/basket_empty.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteProduct, minusProduct, plusProduct } from '../../store/basketSlice.ts'
-import { IBasket } from '../../interface/interface.ts'
+import { IBasket, IState } from '../../interface/interface.ts'
 import { Link } from 'react-router-dom'
 
 type TProps = {
@@ -12,9 +12,7 @@ type TProps = {
 export default function Basket({ setModal }: TProps) {
 
     const dispath = useDispatch()
-    const basket = useSelector((state: { user: IDBRequestReadyState, basket: IBasket[] }) => {
-        return state.basket
-    })
+    const basket = useSelector((state: IState) => {return state.basket})
 
     return (
             <div onClick={(e) => { e.stopPropagation() }} className={(setModal) ? 'basket' : 'basket_checkout'}>

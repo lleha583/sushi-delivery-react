@@ -20,7 +20,8 @@ export interface IUser {
     email: string,
     number: string,
     favorite: number[],
-    adress:string
+    adress:string,
+    status: boolean
 }
 
 export interface INews {
@@ -30,3 +31,8 @@ export interface INews {
     body: string,
     date: string
 }
+
+export interface IState {
+    user: IUser, 
+    basket: IBasket[] 
+} 
