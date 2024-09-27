@@ -1,0 +1,58 @@
+.auth {
+    display: block;
+    margin: 200px auto;
+    width: 400px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form {
+    margin: 40px 0;
+}
+
+.auth input {
+    width: 320px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #d1d1d144;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    padding: 3px 10px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+#btn_submit {
+    width: 360px;
+    height: 35px;
+    margin-bottom: 0;
+    background-color: #2aac2a;
+    color: white;
+    border: 1px solid lightgray;
+}
+
+.auth input:hover {
+    cursor: pointer;
+}
+
+.auth button {
+    margin: 0 140px;
+    background-color: white;
+    border: none;
+}
+
+.auth button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.input_empty {
+    margin: 0;
+    color: red;
+    position: relative;
+    bottom: 25px;
+    left: 5px;
+}

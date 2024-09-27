@@ -1,4 +1,4 @@
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import "./user.css";
 import history from '../../assets/icons/icon_history.svg'
 import favorite from '../../assets/icons/icon_favorite.svg'
@@ -11,23 +11,20 @@ import { IState } from "../../interface/interface";
 
 export default function User() {
 
-    const navigate = useNavigate()
-
     const location = useLocation()
     const user = useSelector((state: IState) => {return state.user})
     useLocation().state = user.favorite
-    
+
     const [active, setActive] = useState<number | null>(null)
 
     useEffect(()=> {
-        if (user.status === false) 
-        if(location.state !== null) return setActive(location.state)
+        if(location.state !== null) setActive(location.state)
     }, [])
 
     const changeActive = (num: number): void => {
         setActive(num)
     }
-
+    
     return (
         <section className="user">
             <nav className="user_nav">

@@ -1,15 +1,9 @@
-import Modal from "../Modal/Modal";
+export default function Notifications() {
 
-type TProps = {
-    setModal: (value: number | null) => void
-}
-
-export default function Notifications({ setModal }: TProps) {
     return (
-        <Modal setModal={setModal}>
             <div onClick={(e)=>{e.stopPropagation()}} className="notifications">
-
+                <h1>sdfsfsadf</h1>
+                <h2>asdfsadfs</h2>
             </div>
-        </Modal>
     )
 }

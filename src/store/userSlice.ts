@@ -7,7 +7,7 @@ export const userSlice = createSlice({
     name: 'user',
     initialState: {
         name: 'lleha',
-        email: 'lleha583@gmail.com',
+        email: 'any@gmail.com',
         number: '1234567890',
         favorite: [0, 3, 4],
         adress: 'any adress',
