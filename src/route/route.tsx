@@ -7,11 +7,11 @@ import User from "../pages/User/User";
 import Favorite from "../pages/User/Favorite/Favorite";
 import Adress from "../pages/User/Adress/Adress";
 import History from "../pages/User/History/History";
-import Theme from "../pages/User/Theme/Theme";
 import CatalogList from "../pages/CatalogList/CatalogList";
 import Product from "../pages/Product/Product";
 import Checkout from "../pages/Checkout/Checkout";
 import { lazy, Suspense } from "react";
+import PageNotFound from "../components/PageNotFound";
 
 const News = lazy(() => {return import("../pages/News/News");})
 const About = lazy(() => {return import("../pages/About/About");})
@@ -20,6 +20,7 @@ export const route  = createBrowserRouter([
     {
         path: '',
         element: <App />,
+        errorElement: <PageNotFound />,
         children: [
             {
                 index: true,
@@ -68,10 +69,6 @@ export const route  = createBrowserRouter([
                     {
                         path: 'History',
                         element: <History />
-                    },
-                    {
-                        path: 'theme',
-                        element: <Theme />
                     }
                 ]
             }

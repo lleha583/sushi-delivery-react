@@ -15,11 +15,17 @@ export const userSlice = createSlice({
     } as IUser,
     reducers: {
         addFavorite: (state, action) => {
-            state.favorite.push(action.payload)
-        }
+            return {
+                ...state,
+                favorite: [...state.favorite, action.payload],
+            }
+        },
+        setNewStatus: (state) => {
+            state.status = true
+        },
     }
 })
 
-export const { addFavorite } = userSlice.actions
+export const { addFavorite, setNewStatus } = userSlice.actions
 
 export default userSlice.reducer

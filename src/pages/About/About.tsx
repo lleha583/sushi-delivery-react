@@ -3,7 +3,7 @@ import "./about.css";
 export default function About() {
   return (
     <section className="about">
-      <h1>Публичный договор (оферта)</h1>
+      <h1>Публичный договор</h1>
       <span>
         Редакция от 10 июля 2018 года
         <br />
@@ -12,207 +12,101 @@ export default function About() {
       </span>
       <h2>1. Общие положения</h2>
       <p>
-        1.1. Принятие условий Договора равносильно договору, подписанному между
-        Продавцом и Покупателем. При заказе Товара Покупатель принимает правила
-        и условия пользования Сайтом, указанные в Договоре. Если Покупатель не
-        согласен с правилами и условиями, он обязан прекратить использование
-        Сайта.
+        Lorem ipsum, dinus vitae repellinima cum omnis sunt officiis excepturi
+        assumenda, saepe magni neque consectetur eius id deleniti voluptates, cupiditate
+        perspiciatis
         <br />
-        <br /> 1.2. В отношениях между Покупателем и Продавцом применяются
-        положения законодательства Украины. Представленные на сайте Товары и
-        Договор являются публичной офертой в соответствии со статьями 633 и 634
-        Гражданского Кодекса Украины.
         <br />
-        <br /> 1.3. Продавец имеет право вносить изменения в Договор в
-        одностороннем порядке путем размещения новой редакции Договора на Сайте
-        без дополнительного уведомления Покупателя. Новая редакция вступает в
-        силу с даты публикации на Сайте, если иное не указано в Договоре.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet
+        quam ab reiciendis commodi minus vitae repellendus sit esse accusamus modi
         <br />
-        <br /> 1.4. Продавец имеет право на переуступку (или другой способ
-        передачи своих прав и обязанностей) третьим лицам.
         <br />
-        <br /> 1.5. Сайт может быть временно, частно или полностью недоступным
-        по причине проведения работ или по каким-либо другим причинам
-        технического характера без предупреждения Покупателя.
+        o, vero commodi non impedit deleniti? Totam, veniam.
         <br />
-        <br /> 1.6. Если отдельные положения или пункты Договора будут признаны
-        недействительными или незаконными, такое положение может быть исключено
-        из Договора и заменено новыми положениями. При этом такая замена не
-        приводит к пересмотру Договора или признанию всего Договора
-        недействительным.
+        <br />
+        vitae repellendus sit esse accusamus modi distinctio quae magnam quo. Minima cum omnis sunt officiis excepturi
+        assumenda, saepe magni neque consepedit deleniti? Totam, veniam.
+        <br />
+        <br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse accusamus modi distinctio quae magnam quo. Minima
+        cum omnis sunt officiis liquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
+
+        <br />
+        <br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse accusamus modi distinctio quae magnam quo. Minima
+        cum omnis sunt officiis excepturi assumenda,fficiis labore placeat exercitationem
+        reprehenderit. Nam laborum quisquam impedit harum. Ut architecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
       </p>
       <h2>2. Товар</h2>
       <p>
-        2.1. На сайте предлагаются к продаже товары, в том числе, но не
-        исключительно потребительские товары, готовые блюда и напитки. В случае
-        отсутствия Товаров, Продавец имеет право исключить такой Товар из Заказа
-        и сообщить об этом Покупателю по электронному адресу или по телефону,
-        указанному Покупателем. <br />
-        <br />
-        2.2. На Сайте указывается основная информация о товарах и фотографиях.
-        Фотографии являются иллюстрациями Товара и могут отличаться от
-        фактического внешнего вида Товара. Информация (описание) относительно
-        Товара может содержать опечатки, Продавец может предоставить
-        дополнительную имеющуюся информацию о товаре по запросу Покупателя.{" "}
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse accusamus modi distinctio quae magnam quo. Minima
+        cum omnis sunt officiis excum. Ut architecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
         <br />
         <br />
-        2.3. Продавец может в одностороннем порядке изменить цену Товара,
-        указанную на сайте. Право не распространяется на заказанный и
-        оплаченный, согласно условиям Договора, Товар.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendu commodi non impedit deleniti? Totam, veniam.
+        <br />
+        <br />
+        Lorem ipsum, dolor sit amet consectetur adrchitecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
       </p>
       <h2>3. Заказ Товара</h2>
       <p>
-        3.1. Покупатель может оформить запрос на приобретение и доставку товара,
-        который есть в наличии и представлен на Сайте. Оформление осуществляется
-        с помощью указания номера телефона, на который представитель Продавца
-        совершает звонок и принимает заказы и через заказы в электронном виде.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendumque laboriosam officiis labore placeat exercitationem
+        reprehenderit. Nam laborum quisquam impedit harum. Ut architecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
         <br />
         <br />
-        3.2. Оформление заказа в электронном виде осуществляется через «Корзину»
-        на Сайте. Покупатель, получив информацию о товаре на Сайте по своему
-        усмотрению, выбирает Товар, нажимает кнопку «Купить». В «Корзине»
-        Покупатель самостоятельно проверяет правильность выбора Товара,
-        заполняет информацию о себе, адресе доставки, способе доставки и способе
-        оплаты, и оформляет заказ нажимая кнопку «Заказать».
+        Lorem ipsum, dolor sit ametlabore placeat exercitationem
+        reprehenderit. Nam laborum quisquam impedit harum. Ut architecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
         <br />
-        <br /> 3.3. Покупатель самостоятельно несет полную ответственность за
-        предоставление ложных или ложных сведений, что повлекло за собой
-        невозможность надлежащего выполнения Продавцом своих обязательств перед
-        Покупателем. <br />
         <br />
-        3.4. В случае изменения цены Товар Продавец связывается с Покупателем
-        через указанные им контакты для подтверждения заказа или его
-        аннулирования. В случае невозможности связаться с Покупателем заказ
-        может считаться аннулированным.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse acco ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
         <br />
-        <br /> 3.5. Заказ может быть аннулирован Покупателем до момента оплаты и
-        фактической передачи Товара в случае неполучения товара Покупателем и
-        отсутствия оплаты Товара в срок.
+        <br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse accusamus mchitecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
+        <br />
+        <br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse accusamus modi distinctio quae magnam quo. Minima
+        cum omnis sunt officiis excepturi assumenda, saepecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
       </p>
       <h2>3. Заказ Товара</h2>
       <p>
-        3.1. Покупатель может оформить запрос на приобретение и доставку товара,
-        который есть в наличии и представлен на Сайте. Оформление осуществляется
-        с помощью указания номера телефона, на который представитель Продавца
-        совершает звонок и принимает заказы и через заказы в электронном виде.
+        Lorem ipsum, dolor sit amet consec harum. Ut architecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
         <br />
         <br />
-        3.2. Оформление заказа в электронном виде осуществляется через «Корзину»
-        на Сайте. Покупатель, получив информацию о товаре на Сайте по своему
-        усмотрению, выбирает Товар, нажимает кнопку «Купить». В «Корзине»
-        Покупатель самостоятельно проверяет правильность выбора Товара,
-        заполняет информацию о себе, адресе доставки, способе доставки и способе
-        оплаты, и оформляет заказ нажимая кнопку «Заказать». <br />
-        <br />
-        3.3. Покупатель самостоятельно несет полную ответственность за
-        предоставление ложных или ложных сведений, что повлекло за собой
-        невозможность надлежащего выполнения Продавцом своих обязательств перед
-        Покупателем. <br />
-        <br />
-        3.4. В случае изменения цены Товар Продавец связывается с Покупателем
-        через указанные им контакты для подтверждения заказа или его
-        аннулирования. В случае невозможности связаться с Покупателем заказ
-        может считаться аннулированным.
-        <br />
-        <br /> 3.5. Заказ может быть аннулирован Покупателем до момента оплаты и
-        фактической передачи Товара в случае неполучения товара Покупателем и
-        отсутствия оплаты Товара в срок.
-      </p>
-
-      <h2>4. Оплата Товара</h2>
-      <p>
-        4.1. Цена товара указана в гривнах на условиях EXW (ИНКОТЕРМС 2010).
+        Lorem ipsum, dolor sit amet consectetur adipirchitecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
         <br />
         <br />
-        4.2. Цена товара не включает в себя комиссию и дополнительное собрание
-        банков и платежных систем. Покупатель самостоятельно и за свой счет
-        уплачивает такие сборы. Размер комиссии или дополнительного сбора
-        уведомляет соответствующий банк и платежная система.
-        <br />
-        <br /> 4.3. Цена товара может быть изменена Продавцом в одностороннем
-        порядке на условиях, указанных в Договоре. <br />
-        <br />
-        4.4. Покупатель может оплатить Товар онлайн или в момент получения
-        товара курьером. Выбор оплаты осуществляется при оформлении Заказа
-        Товара. <br />
-        <br />
-        4.5. Если в Заказе есть алкогольные Товары, указанные на Сайте, то
-        Покупатель может оплатить Заказ исключительно наличными курьеру в момент
-        получения товара. <br />
-        <br />
-        4.6. При оплате Товар онлайн Покупатель перенаправляется на платежный
-        сервис LiqPay, где Покупатель имеет возможность оплатить Заказ с помощью
-        карт платежных систем Visa и Mastercard.
-        <br />
-        <br /> 4.7. Продавец имеет право предоставлять скидки на товары. Условия
-        скидок указываются Продавцом и могут быть изменены Продавцом в
-        одностороннем порядке.
-      </p>
-
-      <h2>5. Доставка Товара</h2>
-      <p>
-        5.1. Доставка товара осуществляется путем доставки курьером по г.. Зона
-        доставки указывается на Сайте по ссылке ninjasushi.com.ua/delivery/{" "}
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse accusamus modi
+        impedit deleniti? Totam, veniam.
         <br />
         <br />
-        5.2. При приеме Товара Покупатель производит осмотр на соответствие
-        ассортимента, комплектности и качества и наличия дефектов на упаковке. В
-        случае несоответствия, Покупатель может отказаться от Товара.
-        <br />
-        <br /> 5.3. Моментом перехода права собственности на Товар считается
-        момент передачи Товара Покупателю или лицу, указанному в Заказе в
-        качестве получателя. В момент перехода права собственности Продавец
-        считается исполнившим свои обязанности по Договору.
-        <br />
-        <br /> 5.4. Доставка Товара — отдельная услуга, не являющаяся
-        неотъемлемой частью Товара.
-      </p>
-      <h2>6. Возврат и обмен Товара</h2>
-      <p>
-        6.1. Продовольственные товары, доступные на Сайте для Заказа, не
-        подлежат обмену и возврату в соответствии с Постановлением КМУ N172 от
-        19.03.1994 г. «О реализации отдельных положений Закона Украины «О защите
-        прав потребителей» с изменениями и дополнениями.
-      </p>
-
-      <h2>7. Конфиденциальность и персональные данные</h2>
-      <p>
-        7.1. Продавец собирает и обрабатывает персональную информацию, которую
-        Покупатель предоставляет самостоятельно во время регистрации или
-        оформления Заказа в соответствии с Законом Украины от 01 июня 2010 г. №
-        2297-VI «О защите персональных данных» и Договора. <br />
-        <br />
-        7.2. Персональные данные собираются и обрабатываются с целью
-        предоставления Покупателям доступа к Сайту и обработке Заказов
-        Покупателей, информирования (в том числе рекламными материалами), а
-        также других действий, связанных с такими целями. <br />
-        <br />
-        7.3. Политика конфиденциальности и персональных данных по Договору
-        применяется исключительно к Сайту. При переходе Покупателя на сайты
-        третьих лиц (в том числе сторонних сервисов), Покупатель руководствуется
-        политикой конфиденциальности соответствующего сервиса.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse accuschitecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
         <br />
         <br />
-        7.4. Покупатель указывает фамилию и имя, электронную почту, номер
-        телефона, адрес доставки заказа. Остальная информация предоставляется
-        Покупателем по его выбору в комментарии к Заказу. Покупатель
-        самостоятельно проверяет достоверность предоставленной информации.{" "}
-        <br />
-        <br />
-        7.5. Продавец имеет право на отправку рекламных сообщений, продвижение
-        Товара, информационных материалов по Товарам, услугам Продавца,
-        мероприятиях и акциях. <br />
-        <br />
-        7.6. Продавец имеет право на передачу персональных данных Покупателей
-        третьим лицам, если эта передача требуется для выполнения Продавцом
-        своих обязанностей по Договору и защиты прав и свобод Продавца или
-        третьих лиц, если Покупатель нарушает условия Договора. <br />
-        <br />
-        7.7. Покупатель имеет право отказаться от получения рекламной и другой
-        информации посредством сообщения на электронную почту, указанную для
-        контакта на Сайте. Покупатель имеет право запросить информацию о том,
-        обрабатываются ли его данные Продавцом. Продавец дает такой ответ в
-        течение 30 календарных дней.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, eveniet quam ab reiciendis
+        commodi minus vitae repellendus sit esse ac architecto ipsum, aliquam eveniet ipsa
+        illum cum tenetur ea sunt laboriosam explicabo, vero commodi non impedit deleniti? Totam, veniam.
       </p>
     </section>
   );

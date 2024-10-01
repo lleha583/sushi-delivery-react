@@ -39,7 +39,9 @@ export default function Header() {
         <header> 
             <div className='header__inner'>
             <div className="header_logo">
-                <img src={logo} width='100px' />
+                <Link to={'/'}>
+                    <img src={logo} width='100px' />
+                </Link>
             </div>
             <nav className="header_navigation">
                 <Link to={'/'}>Главная</Link>

@@ -1,25 +1,20 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./user.css";
 import history from '../../assets/icons/icon_history.svg'
 import favorite from '../../assets/icons/icon_favorite.svg'
 import adress from '../../assets/icons/icon_map-point.svg'
 import theme from '../../assets/icons/icon_theme.svg'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import iconUser from '../../assets/icons/icon_user.svg'
 import { useSelector } from "react-redux";
 import { IState } from "../../interface/interface";
 
 export default function User() {
 
-    const location = useLocation()
     const user = useSelector((state: IState) => {return state.user})
-    useLocation().state = user.favorite
 
     const [active, setActive] = useState<number | null>(null)
 
-    useEffect(()=> {
-        if(location.state !== null) setActive(location.state)
-    }, [])
 
     const changeActive = (num: number): void => {
         setActive(num)
@@ -39,10 +34,6 @@ export default function User() {
                 <Link to={"adress"} onClick={()=> {changeActive(2)}} className={active === 2 ? 'user_active' : ''}>
                     <img src={adress} />
                     <p>Адрес доставки</p>
-                </Link>
-                <Link to={"theme"} onClick={()=> {changeActive(3)}} className={active === 3 ? 'user_active' : ''}>
-                    <img src={theme} />
-                    <p>Тема сайта</p>
                 </Link>
                 <div className="user_status">
                     <img src={iconUser} />

@@ -11,3 +11,57 @@
     padding: 0 100px;
     background-color: white;
 }
+
+.btn_adress_new {
+    width: 170px;
+    height: 60px;
+    background-color: #2ad32a;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.btn_adress_new:hover {
+    cursor: pointer;
+}
+
+.adress_img {
+    width: 35px;
+}
+
+.adress_block {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 20px;
+    border-radius: 15px;
+    margin: 30px 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.adress_block div {
+    display: flex;
+    gap: 20px;
+}
+
+.btn_adress {
+    padding: 10px 20px;
+    background-color: rgb(245, 244, 244);
+    border: none;
+    border-radius: 10px;
+}
+
+.adress_block input {
+    width: 320px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #d1d1d144;
+    outline: none;
+    border: none;
+    padding: 3px 10px;
+    font-size: 16px;
+}

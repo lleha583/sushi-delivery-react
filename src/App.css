@@ -1,3 +1,11 @@
 .root_children {
     margin-top: 130px;
 }
+
+p,a,input,button {
+    font-family: 'roboto', sans-serif;
+}
+
+h1,h2,h3 {
+    font-family: 'roboto-bold', sans-serif;
+}

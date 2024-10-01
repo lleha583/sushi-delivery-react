@@ -15,6 +15,7 @@
 }
 
 .catalog p {
+    font-size: 15px;
     margin: 10px 0;
     color: #afafaf;
 }
@@ -63,4 +64,8 @@
     border: none;
     background-color: #a7e6a7;
     border-radius: 5px;
+}
+
+.block_btn *:hover {
+    cursor: pointer;
 }

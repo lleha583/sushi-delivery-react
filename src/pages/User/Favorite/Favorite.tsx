@@ -8,20 +8,26 @@ import { useState } from 'react';
 import { addProduct } from '../../../store/basketSlice';
 import PopupNotifications from '../../../components/Notifications/PopupNotifications';
 import iconFavorite from '../../../assets/icons/icon_favorite.svg';
+import { addFavorite } from '../../../store/userSlice';
 
 export default function Favorite() {
 
     const favorite = useLocation().state
     const dispath = useDispatch()
 
-    const [notification, setNotification] = useState(false)
+    const [notification, setNotification] = useState<null | "basket" | "favorite">(null)
 
-    const setNewProduct = (item: IProduct) => {
-
-        dispath(addProduct(item))
-
-        setNotification(true)
-        setTimeout(()=> {setNotification(false)}, 4000)
+    const setNewProduct = (item: IProduct | number, value: string) => {
+        if(value === 'basket') { 
+            dispath(addProduct(item)) 
+            setNotification("basket")
+        }
+        else { 
+            dispath(addFavorite(item))
+            setNotification("favorite")
+         }
+        
+        setTimeout(()=> {setNotification(null)}, 4000)
     }
 
 
@@ -30,39 +36,44 @@ export default function Favorite() {
             {
                 (favorite.length === 0) ? (
                     <>
-                        <img className='user_favorite_empty' src={imgFavorite} alt="" />
+                        <img className='user_favorite_empty' src={imgFavorite} />
                         <div>
                             <h1>у вас нет сохраненных адресов</h1>
                             <p>сделайте свой первый заказ и адрес сохранится автоматически</p>
                         </div>
                     </>
                 ) : (
-                    favorite.map((item: number)=> {
+                    favorite.map((item: IProduct) => {
                         return (
-                            <div className="block" key={item} >
-                                <Link to={`/catalog/${sets[item].title}/${sets[item].name}`}>
+                            <div className="block" key={sets[0].id} >
+                                <Link to={`/catalog/sets/${sets[0].name}`}>
                                 <div className="block_image">
-                                    <img src={sets[item].imageUrl} width='100%' />
+                                    <img src={item.imageUrl} width='100%' />
                                 </div>
                                 <div className="block_info">
-                                    <h1>{sets[item].title}</h1>
-                                    <p>{sets[item].body}</p>
+                                    <h1>{sets[0].title}</h1>
+                                    <p>{sets[0].body}</p>
                                 </div>
                                 </Link>
                                 <div className="block_btn">
-                                    <h1>{sets[item].price}p.</h1>
+                                    <h1>{item.price}p.</h1>
                                     <div>
-                                        <img className="block_btn_favorite" src={iconFavorite} />
-                                        <button className="block_btn_add" onClick={()=> {setNewProduct(sets[item])}}>+</button>
+                                    <img 
+                                        className="block_btn_favorite" src={iconFavorite} 
+                                        onClick={()=>setNewProduct(sets[0].id, 'favorite')} 
+                                    />
+                                    <button 
+                                        className='block_btn_add'
+                                        onClick={()=>{setNewProduct(item, 'basket')}} 
+                                    >В козину</button>
                                     </div>
                                 </div>
                             </div>
                         )
-                    })
-                )
+                    }))
             }
             {
-                (notification && <PopupNotifications status={'basket'}/>)
+                    (notification !== null && <PopupNotifications value={notification} />)
             }
         </div>
     )

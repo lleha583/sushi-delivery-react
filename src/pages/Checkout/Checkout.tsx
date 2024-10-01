@@ -7,7 +7,13 @@ export default function Checkout() {
     return (
         <section className="checkout">
             <CheckoutForm />
-            <Basket />
+            <div className="checkout_basket">
+                <Basket />
+                <div className="checkout_info">
+                    
+                    
+                </div>
+            </div>
         </section>
     )
 }

@@ -1,8 +1,8 @@
 .user_favorite {
     display: flex;
+    gap: 10px;
     width: 920px;
     align-items: center;
-    background-color: white;
     border-radius: 15px;
     flex-wrap: wrap;
 }
@@ -12,3 +12,4 @@
     padding: 0 100px;
     background-color: white;
 }
+

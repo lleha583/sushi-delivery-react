@@ -14,13 +14,13 @@ import { addFavorite } from "../../store/userSlice";
 
 
 export default function Catalog({ value }: { value: string }) {
+    console.log('asdf');
 
     const dispath = useDispatch()
 
     const [foodList, setFoodList] = useState<IProduct[]>([...sushi])
     const [notification, setNotification] = useState<null | "basket" | "favorite">(null)
     
-
     const setNewProduct = (item: IProduct | number, value: string) => {
         if(value === 'basket') { 
             dispath(addProduct(item)) 
@@ -71,8 +71,14 @@ export default function Catalog({ value }: { value: string }) {
                                 <div className="block_btn">
                                     <h1>{item.price}p.</h1>
                                     <div>
-                                    <img onClick={()=>setNewProduct(item.id, 'favorite')} className="block_btn_favorite" src={iconFaforite} />
-                                    <button onClick={()=>{setNewProduct(item, 'basket')}} className='block_btn_add'>В козину</button>
+                                    <img 
+                                        className="block_btn_favorite" src={iconFaforite} 
+                                        onClick={()=>setNewProduct(item.id, 'favorite')} 
+                                    />
+                                    <button 
+                                        className='block_btn_add'
+                                        onClick={()=>{setNewProduct(item, 'basket')}} 
+                                    >В козину</button>
                                     </div>
                                 </div>
                             </div>

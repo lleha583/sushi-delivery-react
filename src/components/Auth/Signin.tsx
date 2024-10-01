@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./auth.css";
+import { useDispatch } from "react-redux";
+import { setNewStatus } from "../../store/userSlice";
 
 interface IForm {
     email: string,
@@ -7,6 +9,10 @@ interface IForm {
 }
 
 export default function Signin({ setStatus }: { setStatus: (value: string) => void }) {
+
+    //after delete
+    const dispath = useDispatch()
+    //
 
     const [isEmpty, setIsEmpty] = useState<null | string>(null)
     const [formData, setFormData] = useState<IForm>({
@@ -29,7 +35,8 @@ export default function Signin({ setStatus }: { setStatus: (value: string) => vo
         if (formData.password === '') return setIsEmpty('password')
 
         setIsEmpty(null)
-        console.log(formData);
+        dispath(setNewStatus())
+        console.log('all good');
     };
 
     return (
