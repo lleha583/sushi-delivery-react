@@ -1,21 +1,26 @@
 import imgFavorite from '../../../assets/img/user_favorite.png';
 import './favorite.css';
 import sets from '../../../data/sets.json'
-import { useDispatch } from 'react-redux';
 import { IProduct } from '../../../interface/interface';
-import { Link, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { addProduct } from '../../../store/basketSlice';
 import PopupNotifications from '../../../components/Notifications/PopupNotifications';
 import iconFavorite from '../../../assets/icons/icon_favorite.svg';
-import { addFavorite } from '../../../store/userSlice';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
 
 export default function Favorite() {
 
-    const favorite = useLocation().state
+    const [favorite, setFavorite] = useState({})
+    const [notification, setNotification] = useState<null | "basket" | "favorite">(null)
+
     const dispath = useDispatch()
 
-    const [notification, setNotification] = useState<null | "basket" | "favorite">(null)
+    useEffect(()=> {
+        axios.get('http://127.0.0.1:8000/commands/favoritelist/show', {withCredentials: true})
+            .then(response=>{console.log(response);})
+    }, [])
 
     const setNewProduct = (item: IProduct | number, value: string) => {
         if(value === 'basket') { 
@@ -23,7 +28,6 @@ export default function Favorite() {
             setNotification("basket")
         }
         else { 
-            dispath(addFavorite(item))
             setNotification("favorite")
          }
         

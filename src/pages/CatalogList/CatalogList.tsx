@@ -1,6 +1,6 @@
 import { useLocation, useParams } from "react-router-dom";
 import Catalog from "../../components/Catalog/Catalog";
-import Categories from "../../components/Categories/Categories";
+import Categories from "../../components/Catalog/Categories";
 
 export default function CatalogList() {
 

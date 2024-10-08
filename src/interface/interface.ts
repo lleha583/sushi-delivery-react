@@ -16,12 +16,16 @@ export interface IBasket {
 }
 
 export interface IUser {
-    name: string,
-    email: string,
-    number: string,
-    favorite: number[],
-    adress:string,
-    status: boolean
+    status: boolean, 
+    data: {
+        number: string | null,
+        username: string| null,
+        registered_at: string| null,
+        id: number| null,
+        email: string| null,
+        addresses: string| null,
+        password: string| null,
+    }
 }
 
 export interface INews {

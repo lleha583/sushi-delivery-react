@@ -5,8 +5,15 @@ import Delivery from "../../components/Delivery/Delivery"
 import imgSets from '../../assets/img/catalog_sets.jpg'
 import imgDrinks from '../../assets/img/catalog_drinks.jpg'
 import Carusel from "../../components/Carusel/Carucel"
+import { useEffect } from "react"
+import { checkAuth } from "../../store/userSlice"
+import { store } from "../../store"
 
 export default function Main() {
+
+    useEffect(() => {
+        store.dispatch(checkAuth())
+    }, [])
 
 
     return (

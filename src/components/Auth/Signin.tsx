@@ -1,18 +1,12 @@
 import { useState } from "react";
 import "./auth.css";
-import { useDispatch } from "react-redux";
-import { setNewStatus } from "../../store/userSlice";
-
+import { signin } from "../../services/auth/signin";
 interface IForm {
     email: string,
     password: string,
 }
 
 export default function Signin({ setStatus }: { setStatus: (value: string) => void }) {
-
-    //after delete
-    const dispath = useDispatch()
-    //
 
     const [isEmpty, setIsEmpty] = useState<null | string>(null)
     const [formData, setFormData] = useState<IForm>({
@@ -29,14 +23,10 @@ export default function Signin({ setStatus }: { setStatus: (value: string) => vo
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
+        e.preventDefault()
         if (formData.email === '') return setIsEmpty('email')
         if (formData.password === '') return setIsEmpty('password')
-
-        setIsEmpty(null)
-        dispath(setNewStatus())
-        console.log('all good');
+        signin(formData)
     };
 
     return (
@@ -44,7 +34,7 @@ export default function Signin({ setStatus }: { setStatus: (value: string) => vo
             <h1>Вход в аккаунт</h1>
             <form onSubmit={handleSubmit}>
                 <input
-                    type="email"
+                    type="text"
                     placeholder="почта"
                     name="email"
                     value={formData.email}

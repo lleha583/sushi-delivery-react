@@ -10,11 +10,8 @@ import { useDispatch } from "react-redux";
 import { addProduct } from "../../store/basketSlice";
 import { IProduct } from "../../interface/interface";
 import PopupNotifications from "../Notifications/PopupNotifications";
-import { addFavorite } from "../../store/userSlice";
-
 
 export default function Catalog({ value }: { value: string }) {
-    console.log('asdf');
 
     const dispath = useDispatch()
 
@@ -27,7 +24,6 @@ export default function Catalog({ value }: { value: string }) {
             setNotification("basket")
         }
         else { 
-            dispath(addFavorite(item))
             setNotification("favorite")
          }
         
@@ -61,7 +57,7 @@ export default function Catalog({ value }: { value: string }) {
                             <div className="block" key={item.id} >
                                 <Link to={`/catalog/${value}/${item.name}`}>
                                 <div className="block_image">
-                                    <img src={item.imageUrl} width='100%' />
+                                    <img src={item.imageUrl} width='100%' alt="product" />
                                 </div>
                                 <div className="block_info">
                                     <h1>{item.title}</h1>
@@ -74,6 +70,7 @@ export default function Catalog({ value }: { value: string }) {
                                     <img 
                                         className="block_btn_favorite" src={iconFaforite} 
                                         onClick={()=>setNewProduct(item.id, 'favorite')} 
+                                        alt="button_favorite"
                                     />
                                     <button 
                                         className='block_btn_add'

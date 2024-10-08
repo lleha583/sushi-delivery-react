@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "imbir",
-    "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/3ad/480_372_2/nw6ys7phb8nfuzgmz0ze5eej7nny3k6v.jpg?167769819242489",
+    "imageUrl": "",
     "title": "Имбирь маринованный",
     "body": "Маринованный корень имбиря",
     "price": 1.79,
@@ -11,7 +11,7 @@
   {
     "id": 1,
     "name": "vasabi",
-    "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/277/254_197_2/b28jc17bgnrwgnjyojumrxry0c41nza2.jpg?167767522716980",
+    "imageUrl": "",
     "title": "Васаби",
     "body": "Японский хрен",
     "price": 2.4,
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "name": "souce",
-    "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/ad7/254_197_2/cesp1iyqiaotz3c2qty5iim3cns3fise.jpg?17231312339395",
+    "imageUrl": "",
     "title": "Соевый соус",
     "body": "Соевый соус",
     "price": 4.1,
@@ -29,7 +29,7 @@
   {
     "id": 3,
     "name": "teriyaki",
-    "imageUrl": "https://fsushi.by/upload/resize_cache/iblock/ad7/480_372_2/cesp1iyqiaotz3c2qty5iim3cns3fise.jpg?172314062825661",
+    "imageUrl": "",
     "title": "Соус Терияки",
     "body": "Соус на основе соевого соуса",
     "price": 18.9,

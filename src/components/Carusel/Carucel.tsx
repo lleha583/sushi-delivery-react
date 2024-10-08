@@ -36,10 +36,10 @@ export default function Carusel() {
             <div className='carusel_navigation'>
                 <div className='carusel_points'>
                     {
-                        slides.map((item, index)=> {
+                        slides.map((item)=> {
                             return (
-                                <div className={(index === currentIndex) ? 'point' : 'point_active'}
-                                onClick={()=> {setCurrentIndex(index)}} key={index}></div>
+                                <div className={(item.id === currentIndex) ? 'point' : 'point_active'}
+                                onClick={()=> {setCurrentIndex(item.id)}} key={item.id}></div>
                             )
                         })
                     }

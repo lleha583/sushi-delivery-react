@@ -7,7 +7,6 @@ import { addProduct } from '../../store/basketSlice';
 import { useState } from 'react';
 import { IProduct } from '../../interface/interface';
 import PopupNotifications from '../../components/Notifications/PopupNotifications';
-import { addFavorite } from '../../store/userSlice';
 
 
 export default function Product() {
@@ -22,7 +21,6 @@ export default function Product() {
             setNotification("basket")
         }
         else { 
-            dispath(addFavorite(item))
             setNotification("favorite")
          }
         

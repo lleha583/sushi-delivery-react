@@ -17,8 +17,8 @@ export default function Adress() {
     }
 
     const removeAdress = (id: number) => {
-        const filter = adress.filter((item, index) => {
-            if (index === id) { return false }
+        const filter = adress.filter((item) => {
+            if (item.length === id) { return false }
             return true
         })
         setAdress([...filter])

@@ -1,31 +1,50 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { IUser } from "../interface/interface";
 
+export const checkAuth = createAsyncThunk(
+    'fetch/user',
+    async () => {
+        try {
+            const fetchData = await fetch('http://127.0.0.1:8000/user/showinfo', {
+                method: "GET",
+                credentials: "include"
+            })
 
+            const data = await fetchData.json();
+            console.log(data);
+            return data
+        }
+        catch {
+            console.log('ошибка соеденения с сервером');
+        }
+    }
+)
 
 export const userSlice = createSlice({
     name: 'user',
     initialState: {
-        name: 'lleha',
-        email: 'any@gmail.com',
-        number: '1234567890',
-        favorite: [0, 3, 4],
-        adress: 'any adress',
-        status: false
+        status: false,
+        data: {
+            number: null,
+            username: null,
+            registered_at: null,
+            id: null,
+            email: null,
+            addresses: null,
+            password: null,    
+        }
     } as IUser,
-    reducers: {
-        addFavorite: (state, action) => {
-            return {
-                ...state,
-                favorite: [...state.favorite, action.payload],
-            }
-        },
-        setNewStatus: (state) => {
-            state.status = true
-        },
-    }
-})
 
-export const { addFavorite, setNewStatus } = userSlice.actions
+    reducers: {},
+
+    extraReducers(builder) {    
+        builder.addCase(checkAuth.fulfilled, (state, action) => {
+            if(action.payload.status_code === 200) {
+                state.status = true
+                state.data = {...action.payload.detail}
+            }
+        })
+    },
+})
 
 export default userSlice.reducer

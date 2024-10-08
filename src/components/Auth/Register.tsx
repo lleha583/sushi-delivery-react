@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./auth.css";
+import { register } from "../../services/auth/register";
 
 interface IForm {
     name: string,
@@ -32,13 +33,14 @@ export default function Register({ setStatus }: { setStatus: (value: string) => 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         for(const key in formData) {
-            if(formData[key] === '') {
+            if(key === '') {
                 return setIsEmpty(key)
             }
         }
         if(formData.password !== formData.repeatPassword) return setIsEmpty('incorrect')
         setIsEmpty(null)
-        console.log(formData);
+        register(formData)
+        setStatus('signin')
     };
 
 

@@ -1,11 +1,7 @@
-import { useState } from 'react'
 import imgHistory from '../../../assets/img/user_history_undefined.png' 
 import './history.css'
-import axios from 'axios'
 
 export default function History() {
-
-    const [history, setHistory] = useState([])
 
     return (
         <div className='user_history'>
