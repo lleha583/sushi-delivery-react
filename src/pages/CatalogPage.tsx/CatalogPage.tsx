@@ -17,19 +17,19 @@ export default function CatalogPage() {
                         <h2>sushi</h2>
                     </div>
                 </Link>
-                <Link to={'souce'} state={3}>
+                <Link to={'sauce'} state={3}>
                     <div className='category_path_block'>
                         <img src={imgCouse} />
                         <h2>souce</h2>
                     </div>
                 </Link>
-                <Link to={'drinks'} state={2}>
+                <Link to={'drink'} state={2}>
                     <div className='category_path_block'>
                         <img src={imgDrinks} />
                         <h2>drinks</h2>
                     </div>
                 </Link>
-                <Link to={'sets'} state={4}>
+                <Link to={'set'} state={4}>
                     <div className='category_path_block'>
                         <img src={imgSets} />
                         <h2>sets</h2>

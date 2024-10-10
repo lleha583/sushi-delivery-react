@@ -2,8 +2,16 @@ import { Outlet } from 'react-router-dom'
 import './App.css'
 import Header from './layout/Header/Header'
 import Footer from './layout/Footer/Footer'
+import { useEffect } from "react"
+import { checkAuth } from "./store/userSlice"
+import { store } from "./store"
 
 function App() {
+
+  
+  useEffect(() => {
+    store.dispatch(checkAuth())
+  }, [])
 
   return (
     <>

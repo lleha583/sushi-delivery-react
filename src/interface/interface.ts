@@ -1,13 +1,12 @@
 export interface IProduct {
     id: number,
     title: string,
-    name: string,
-    imageUrl: string,
-    body: string | string[]
+    image_url: string,
+    body: string | string[],
+    type?: string,
     price: number,
     weight: number
 }
-
 export interface IBasket {
     name: string,
     quantity: number,

@@ -11,7 +11,7 @@ export default function CatalogList() {
     return (
         <>
             <Categories category={category} />
-            <Catalog value={value} />
+            <Catalog type={value} />
         </>
     )
 
