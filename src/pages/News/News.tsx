@@ -1,15 +1,10 @@
-import { useEffect, useState } from "react"
-import news from '../../data/news.json'
+import { useState } from "react"
 import './news.css'
 import { INews } from "../../interface/interface"
 
 export default function News() {
 
     const [newsList, setNewsList] = useState<INews[]>([])
-
-    useEffect(()=> {
-        setNewsList([...news])
-    }, [])
 
     return (
         <section className="news">

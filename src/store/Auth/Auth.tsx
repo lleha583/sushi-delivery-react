@@ -4,8 +4,6 @@ import Register from "./Register";
 
 export default function Auth() { 
 
-
-
     const [status, setStatus] = useState('signin') 
 
     return (

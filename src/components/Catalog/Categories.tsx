@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './categories.css'
+import './catalog.css'
 import { Link } from 'react-router-dom'
 
 export default function Categories({category}: {category?: number}) {
@@ -9,7 +9,7 @@ export default function Categories({category}: {category?: number}) {
     useEffect(()=>{
         if(category === undefined) return 
         setActive(category)
-    }, [])
+    }, [category])
 
     const changeActive = (num: number): void => {
         if(num === active) {

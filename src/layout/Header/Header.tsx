@@ -11,7 +11,7 @@ import Modal from '../../components/Modal/Modal'
 import Notifications from '../../components/Notifications/Notifications'
 import { useSelector } from 'react-redux'
 import { IState } from '../../interface/interface'
-import Auth from '../../components/Auth/Auth'
+import Auth from '../../store/Auth/Auth'
 
 export default function Header() {
 
@@ -46,7 +46,6 @@ export default function Header() {
             <nav className="header_navigation">
                 <Link to={'/'}>Главная</Link>
                 <Link to={'delivery'}>Доставка</Link>
-                <Link to={'about'}>О нас</Link>
                 <Link to={'news'}>Новости</Link>
             </nav>
             <div className="header_contacts">
@@ -54,7 +53,10 @@ export default function Header() {
                 <p>+12 345 67 89</p>
             </div>
             <div className="header_user">
-                <div onClick={()=>{openModal(1)}} className={'header_user_link ' + (modal === 1 ? 'active' : '')}>
+                <div 
+                    onClick={()=>{openModal(1)}} 
+                    className={'header_user_link ' + (modal === 1 ? 'active' : '')}
+                >
                     <IconNotification color={modal === 1 ? 'white': 'black'} />
                 </div>
                 <div onClick={checkAuth}>

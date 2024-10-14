@@ -1,19 +1,13 @@
 import { useEffect, useState } from 'react'
-import './notifications.css'
+import './modal.css'
 
-export default function PopupNotifications({ value }: {value: string}) {
+export default function PopupNotifications() {
 
     const [text, setText] = useState<null | string>(null)
 
     useEffect(()=> {
-
-        if(value === "basket") {
             setText('Добавлено в корзину')  
-        } else {
-             setText('Добавлено в избранное')
-        }
     }, [])
-
 
     return (
         <div className="popup_notification">

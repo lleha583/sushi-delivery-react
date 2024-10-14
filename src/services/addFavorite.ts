@@ -9,6 +9,6 @@ export const addFavorite = (item: IProduct) => {
     }
 
     axios.post(`http://127.0.0.1:8000/commands/favoritelist/add?food_id=${item.id}&type_food=${category()}`, '', { withCredentials: true })
-    .then(res=>console.log(res))
+    .then(res=> {return res})
     .catch(e=>console.log(e))
 };

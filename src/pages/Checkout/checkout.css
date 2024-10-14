@@ -3,3 +3,22 @@
     justify-content: space-between;
 }
 
+.checkout_info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h3,
+p {
+    margin: 10px;
+}
+
+.btn_address {
+    margin: 10px;
+    padding: 8px 30px;
+    background-color: #4dd84d;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}

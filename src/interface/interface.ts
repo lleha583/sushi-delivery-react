@@ -8,10 +8,12 @@ export interface IProduct {
     weight: number
 }
 export interface IBasket {
+    img: string
     name: string,
     quantity: number,
     startPrice: number, 
-    price: number
+    price: number,
+    type?: string
 }
 
 export interface IUser {
@@ -39,3 +41,10 @@ export interface IState {
     user: IUser, 
     basket: IBasket[] 
 } 
+
+export interface IOrder {
+    name: string,
+    number: string,
+    delivery: number | string,
+    pay: number
+}

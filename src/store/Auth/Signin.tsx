@@ -22,8 +22,7 @@ export default function Signin({ setStatus }: { setStatus: (value: string) => vo
         });
     }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+    const handleSubmit = () => {
         if (formData.email === '') return setIsEmpty('email')
         if (formData.password === '') return setIsEmpty('password')
         signin(formData)

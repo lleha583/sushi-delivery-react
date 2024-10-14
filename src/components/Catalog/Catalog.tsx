@@ -1,25 +1,29 @@
 import { useEffect, useState } from "react"
 import './catalog.css'
 import { useDispatch } from "react-redux";
-import { addProduct } from "../../store/basketSlice";
+import { addBakset } from "../../store/basketSlice";
 import { IProduct } from "../../interface/interface";
-import PopupNotifications from "../Notifications/PopupNotifications";
+import PopupNotifications from "../Modal/PopupNotifications";
 import { CatalogBlock } from "./CatalogBlock";
 import axios from "axios";
+import { addFavorite } from "../../services/addFavorite";
 
 export default function Catalog({ type, page = 1 }: { type: string, page?:number }) {
 
     const dispath = useDispatch()
 
     const [foodList, setFoodList] = useState<IProduct[]>([])
-    const [notification, setNotification] = useState<null | "basket" | "favorite">(null)
+    const [notification, setNotification] = useState<boolean>(false)
     
-    const setNewProduct = (item: IProduct | number) => {
+    const setNewProduct = (item: IProduct) => {
 
-        dispath(addProduct(item))
-        setNotification("basket")
+        if(status === 'basket') { 
+            dispath(addBakset(item))
+        } else { addFavorite(item) }
+        
+        setNotification(true)
 
-        setTimeout(() => { setNotification(null) }, 4000)
+        setTimeout(() => { setNotification(false) }, 4000)
     }
 
     useEffect(() => {
@@ -42,7 +46,7 @@ export default function Catalog({ type, page = 1 }: { type: string, page?:number
                 }
             </div>
             {
-                    (notification !== null && <PopupNotifications value={notification} />)
+                    (notification && <PopupNotifications />)
             }
         </section>
     )

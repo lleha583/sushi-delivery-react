@@ -5,7 +5,7 @@ export const basketSlice = createSlice({
     name: "basket",
     initialState: [] as IBasket[],
     reducers: {
-        addProduct: (state, action) => {
+        addBakset: (state, action) => {
             let value = false
 
             state.forEach((item: IBasket)=> {
@@ -19,15 +19,24 @@ export const basketSlice = createSlice({
 
             if(value) return;
 
+            let type
+
+            if(action.payload.type === undefined) {
+                type = 'set'
+            } else {
+                type = 'food'
+            }
+
             state.push({
+                img: action.payload.image_url,
                 name: action.payload.title,
                 quantity: 1,
                 startPrice: action.payload.price,
-                price: action.payload.price
+                price: action.payload.price,
+                type: type
             })
         },
         plusProduct: (state, action) => {
-
             state.forEach((item: IBasket, index: number)=> {
 
                 if(index === action.payload) {
@@ -39,7 +48,6 @@ export const basketSlice = createSlice({
             })
         },
         minusProduct: (state, action) => {
-
             state.forEach((item: IBasket, index: number)=> {
 
                 if(index === action.payload) {
@@ -53,12 +61,11 @@ export const basketSlice = createSlice({
             })
         },
         deleteProduct: (state, action) => {
-            
             state.splice(action.payload, 1)
         }
     }
 })
 
-export const { addProduct, plusProduct, minusProduct, deleteProduct } = basketSlice.actions 
+export const { addBakset, plusProduct, minusProduct, deleteProduct } = basketSlice.actions 
 
 export default basketSlice.reducer

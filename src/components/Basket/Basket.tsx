@@ -35,12 +35,11 @@ export default function Basket({ setModal }: TProps) {
             </div>
             <div className='basket_block'>
                 {
-
                     basket.map((item: IBasket, index: number) => {
                         return (
                             <div className={(setModal !== undefined) ? 'basket_block_product' : 'basket_block_product white'} key={index}>
                                 <div>
-                                    <img src={empty} />
+                                    <img src={`http://127.0.0.1:8000/commands/product/upload_image?${item.img}`} />
                                     <h1>{item.name}</h1>
                                 </div>
                                 <div>

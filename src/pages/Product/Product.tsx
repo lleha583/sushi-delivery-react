@@ -2,18 +2,20 @@
 import './product.css';
 import iconFaforite from '../../assets/icons/icon_favorite.svg'
 import { useDispatch } from 'react-redux';
-import { addProduct } from '../../store/basketSlice';
+import { addBakset } from '../../store/basketSlice';
 import { useEffect, useState } from 'react';
 import { IProduct } from '../../interface/interface';
-import PopupNotifications from '../../components/Notifications/PopupNotifications';
-import { useParams } from 'react-router-dom';
+import PopupNotifications from '../../components/Modal/PopupNotifications';
+import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-
 
 export default function Product() {
 
-
+    const params = useParams()
     const dispath = useDispatch()
+    
+    const [notification, setNotification] = useState<boolean>(false)
+
     const [product, setProduct] = useState<IProduct>({
         id: 0,
         title: '',
@@ -23,31 +25,32 @@ export default function Product() {
         price: 0,
         weight: 0
     })
-    const [notification, setNotification] = useState<null | "basket" | "favorite">(null)
-    const params = useParams()
+    const [productSet, setProductSet] = useState<IProduct[]>([])
 
     useEffect(()=> {
-        const category = () => {
-            if(params.category === 'sushi' || params.category === 'sauce' ||params.category === 'drink') {
-                return 'food'
-            } else {return 'set'}
-        }
-        axios.get(`http://127.0.0.1:8000/commands/product/${category()}?${category()}_id=${params.product}`)
-        .then((res) => {setProduct({...res.data.detail})})
+        const category = (params.category === undefined) ? 'set' : 'food';
+        
+        axios.get(`http://127.0.0.1:8000/commands/product/${category}?${category}_id=${params.product}`)
+        .then((res) => {
+            setProduct({...res.data.detail})
+            if(category === 'set') {
+                res.data.detail.food_in_set.map((item: number) => {
+                    axios.get(`http://127.0.0.1:8000/commands/product/food?food_id=${item}`)
+                        .then((value) => {
+                            setProductSet((prev) => {return [...prev, value.data.detail ]})
+                        })
+                })
+            }
+        })
     }, [params])
 
-    const setNewProduct = (item: IProduct | number, value: string) => {
-        if(value === 'basket') { 
-            dispath(addProduct(item)) 
-            setNotification("basket")
-        }
-        else { 
-            setNotification("favorite")
-         }
-        
-        setTimeout(()=> {setNotification(null)}, 4000)
-    }
+    const setNewProduct = (item: IProduct) => {
 
+        dispath(addBakset(item))
+        setNotification(true)
+
+        setTimeout(() => { setNotification(false) }, 4000)
+    }
 
     return (
         <>
@@ -57,19 +60,37 @@ export default function Product() {
                 </div>
                 <div className="product_info">
                     <h1 className="product_info_title">{product.title}</h1>
-                    <p className="product_info_body">состав:</p>
+                    <p className="product_info_body" color='red'>состав: </p>
+                    {
+                        (productSet.length !== 0 &&
+                            productSet.map((item)=> {
+                                return (
+                                    <Link to={`/catalog/${(item.type !== undefined) ? item.type : 'set'}/${item.id}`}>
+                                        <p className="product_info_body">{item.title},</p>
+                                    </Link>
+                                )
+                            })
+                        )
+                    }
                     <p className="product_info_body">{product.body}</p>
                     <p className="product_info_weight">вес: {product.weight}г.</p>
                     <div className="product_info_btn">
                         <p className='product_info_price'>{product.price}р.</p>
                         <div>
-                            <img onClick={()=>setNewProduct(product.id, 'favorite')} className="block_btn_favorite" src={iconFaforite} />
-                            <button onClick={()=>{setNewProduct(product, 'basket')}} className='block_btn_add'>В козину</button>
+                            <img 
+                                onClick={()=>setNewProduct(product)} 
+                                className="block_btn_favorite" 
+                                src={iconFaforite} 
+                            />
+                            <button 
+                                onClick={()=>{setNewProduct(product)}} 
+                                className='block_btn_add'
+                            >В козину</button>
                         </div>
                     </div>
                 </div>
                 {
-                    (notification !== null && <PopupNotifications value={notification} />)
+                    (notification && <PopupNotifications />)
                 }
             </section>
         </>

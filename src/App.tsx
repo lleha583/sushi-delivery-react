@@ -7,9 +7,9 @@ import { checkAuth } from "./store/userSlice"
 import { store } from "./store"
 
 function App() {
-
   
   useEffect(() => {
+    
     store.dispatch(checkAuth())
   }, [])
 

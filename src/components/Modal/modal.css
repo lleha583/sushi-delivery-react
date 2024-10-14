@@ -7,3 +7,45 @@
     height: 100%;
     background-color: #0000008c;
 }
+
+
+.popup_notification {
+    width: 300px;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0 0 5px 1px #d6d6d6;
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.popup_notification h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.line {
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: red;
+    left: 0;
+    bottom: 0;
+    animation-name: line;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+}
+
+@keyframes line {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

@@ -9,7 +9,6 @@ export const checkAuth = createAsyncThunk(
                 method: "GET",
                 credentials: "include"
             })
-
             const data = await fetchData.json();
             console.log(data);
             return data
@@ -42,6 +41,7 @@ export const userSlice = createSlice({
             if(action.payload.status_code === 200) {
                 state.status = true
                 state.data = {...action.payload.detail}
+                localStorage.setItem('token', JSON.stringify({id:action.payload.detail.email, token: action.payload.detail.password}))
             }
         })
     },

@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import imgMapPoint from '../../../assets/img/user_adress.jpg'
 import iconMapPoint from '../../../assets/icons/icon_map-point.svg'
-import './adress.css'
+import './address.css'
 
-export default function Adress() {
+export default function Address() {
 
     const [adress, setAdress] = useState<string[]>([])
 
