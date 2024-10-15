@@ -1,8 +1,7 @@
 .product {
     background-color: white;
-    height: 350px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 30px 10px;
     display: flex;
     justify-content: space-around;
 }

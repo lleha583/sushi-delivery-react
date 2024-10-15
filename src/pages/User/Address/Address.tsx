@@ -1,51 +1,68 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import imgMapPoint from '../../../assets/img/user_adress.jpg'
 import iconMapPoint from '../../../assets/icons/icon_map-point.svg'
 import './address.css'
+import { useLocation } from 'react-router-dom'
+import { changeAddress } from '../../../services/user/changeAddress'
 
 export default function Address() {
 
-    const [adress, setAdress] = useState<string[]>([])
+    const location = useLocation()
+    console.log(location);
 
-    const [newAdress, setNewAdress] = useState(false)
+    const [address, setAddress] = useState<string[]>([])
+    const [newAddress, setNewAddress] = useState(false)
     const [input, setInput] = useState('')
 
+    useEffect(() => {
+        if(location.state !== '[null]' && location.state !== null) setAddress([location.state])
+    }, [])
+
     const addAdress = () => {
-        setAdress([input, ...adress])
+        setAddress([input, ...address])
+        changeAddress(input)
         setInput('')
-        setNewAdress(false)
+        setNewAddress(false)
     }
 
-    const removeAdress = (id: number) => {
-        const filter = adress.filter((item) => {
+    const removeAddress = (id: number) => {
+        changeAddress('[null]')
+        const filter = address.filter((item) => {
             if (item.length === id) { return false }
             return true
         })
-        setAdress([...filter])
+        setAddress([...filter])
     }
-
 
     return (
         <>
-            <button className='btn_adress_new' onClick={() => { setNewAdress(!newAdress)}}>Добавить адрес</button>
+            <button className='btn_adress_new' 
+                onClick={() => { setNewAddress(!newAddress)}}
+            >Добавить адрес</button>
             {
                 (
-                    newAdress &&
+                    newAddress &&
                     <div className='adress_block'>
                         <div>
-                            <img className='adress_img' src={iconMapPoint} />
+                            <img 
+                                className='adress_img' 
+                                src={iconMapPoint} 
+                            />
                             <input
                                 type="text"
                                 onChange={(e) => { setInput(e.target.value) }}
                                 value={input}
                             />
                         </div>
-                        <button className='btn_adress' onClick={addAdress}>Добавить</button>
+                        <button 
+                            className='btn_adress' 
+                            onClick={addAdress}
+                        >Добавить</button>
                     </div>
                 )
             }
             {
-                (adress.length === 0 && newAdress === false ) ? (
+                (address.length === 0 && newAddress === false ) ? (
                     <div className='user_adress'>
                         <img src={imgMapPoint} />
                         <div>
@@ -54,14 +71,14 @@ export default function Address() {
                         </div>
                     </div>
                 ) : (
-                    adress.map((item, index) => {
+                    address.map((item, index) => {
                         return (
                             <div className='adress_block' key={index}>
                                 <div>
                                     <img className='adress_img' src={iconMapPoint} />
                                     <h3>{item}</h3>
                                 </div>
-                                <button className='btn_adress' onClick={() => { removeAdress(index) }}>удалить</button>
+                                <button className='btn_adress' onClick={() => { removeAddress(index) }}>удалить</button>
                             </div>
                         )
                     })

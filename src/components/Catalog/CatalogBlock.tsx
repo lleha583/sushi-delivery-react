@@ -32,7 +32,7 @@ export const CatalogBlock = ({ item, setNewProduct, changeFavorite }: IProps) =>
                 <h1>{item.price}p.</h1>
                 <div>
                     <img
-                        className="block_btn_favorite" 
+                        className={(location.pathname === "/user/favorite") ? 'block_btn_favorite true' : 'block_btn_favorite' }
                         src={(location.pathname === "/user/favorite") ? iconFavoriteTrue : iconFavorite}
                         onClick={()=>{changeFavorite(item)}}
                     />

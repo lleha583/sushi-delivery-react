@@ -7,7 +7,7 @@ import PopupNotifications from '../../../components/Modal/PopupNotifications';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { CatalogBlock } from '../../../components/Catalog/CatalogBlock';
-import { deleteFavorite } from '../../../services/deleteFavorite';
+import { deleteFavorite } from '../../../services/user/deleteFavorite';
 
 export default function Favorite() {
 
@@ -38,13 +38,13 @@ export default function Favorite() {
         <div className='user_favorite'>
             {
                 (favorite.length === 0) ? (
-                    <>
-                        <img className='user_favorite_empty' src={imgFavorite} />
+                    <div className='user_favorite_empty'>
+                        <img src={imgFavorite} />
                         <div>
                             <h1>у вас нет сохраненных адресов</h1>
                             <p>сделайте свой первый заказ и адрес сохранится автоматически</p>
                         </div>
-                    </>
+                    </div>
                 ) : (
                     favorite.map((item: IProduct) => {
                         return (

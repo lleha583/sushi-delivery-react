@@ -6,7 +6,7 @@ import { IProduct } from "../../interface/interface";
 import PopupNotifications from "../Modal/PopupNotifications";
 import { CatalogBlock } from "./CatalogBlock";
 import axios from "axios";
-import { addFavorite } from "../../services/addFavorite";
+import { addFavorite } from "../../services/user/addFavorite";
 
 export default function Catalog({ type, page = 1 }: { type: string, page?:number }) {
 
@@ -14,13 +14,14 @@ export default function Catalog({ type, page = 1 }: { type: string, page?:number
 
     const [foodList, setFoodList] = useState<IProduct[]>([])
     const [notification, setNotification] = useState<boolean>(false)
+
+    const changeFavorite = (item: IProduct) => {
+        addFavorite(item)
+}
     
     const setNewProduct = (item: IProduct) => {
 
-        if(status === 'basket') { 
-            dispath(addBakset(item))
-        } else { addFavorite(item) }
-        
+        dispath(addBakset(item))
         setNotification(true)
 
         setTimeout(() => { setNotification(false) }, 4000)
@@ -39,7 +40,7 @@ export default function Catalog({ type, page = 1 }: { type: string, page?:number
                     foodList.map((item: IProduct) => {
                         return (
                             <div className="block" key={item.id}>
-                                <CatalogBlock item={item} setNewProduct={setNewProduct} />
+                                <CatalogBlock item={item} setNewProduct={setNewProduct} changeFavorite={changeFavorite} />
                            </div>
                         )
                     })

@@ -8,6 +8,16 @@
 }
 
 .user_favorite_empty {
+    width: 920px;
+    height: 350px;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.user_favorite_empty img {
     height: 200px;
     padding: 0 100px;
     background-color: white;

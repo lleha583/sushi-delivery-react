@@ -57,6 +57,10 @@
     background-color: buttonface;
 }
 
+.block_btn_favorite[class='block_btn_favorite true'] {
+    background-color: orange !important;
+}
+
 .block_btn_add {
     box-sizing: border-box;
     padding: 5px 15px;

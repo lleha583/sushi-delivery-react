@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IProduct } from "../interface/interface";
+import { IProduct } from "../../interface/interface";
 
 export const deleteFavorite = (item:IProduct) => {
 

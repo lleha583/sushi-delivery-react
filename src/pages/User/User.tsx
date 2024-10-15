@@ -43,6 +43,7 @@ export default function User() {
                     to={"adress"} 
                     onClick={()=>{changeActive(2)}} 
                     className={active === 2 ? 'user_active' : ''}
+                    state={user.data.addresses}
                 >
                     <img src={adress} />
                     <p>Адрес доставки</p>
