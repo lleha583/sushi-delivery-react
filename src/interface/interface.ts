@@ -19,6 +19,7 @@ export interface IBasket {
 export interface IUser {
     status: boolean, 
     data: {
+        [key: string]: string | number | null;
         number: string | null,
         username: string| null,
         registered_at: string| null,

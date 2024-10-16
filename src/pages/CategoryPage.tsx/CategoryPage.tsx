@@ -1,11 +1,11 @@
-import './catalogPage.css'
+import './categoryPage.css'
 import imgSushi from '../../assets/img/catalog_sushi.jpg'
 import imgCouse from '../../assets/img/catalog_couse.jpg'
 import imgDrinks from '../../assets/img/catalog_drinks.jpg'
 import imgSets from '../../assets/img/catalog_sets.jpg'
 import { Link } from 'react-router-dom'
 
-export default function CatalogPage() {
+export default function CategoryPage() {
 
     return (
         <section className='category'>

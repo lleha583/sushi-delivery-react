@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Main from "../pages/Main/Main";
-import CatalogPage from "../pages/CatalogPage.tsx/CatalogPage";
+import CategoryPage from "../pages/CategoryPage.tsx/CategoryPage";
 import DeliveryPage from "../pages/Delivery/DeliveryPage";;
 import User from "../pages/User/User";
 import Favorite from "../pages/User/Favorite/Favorite";
@@ -27,7 +27,7 @@ export const route  = createBrowserRouter([
             },
             {
                 path: 'catalog',
-                element: <CatalogPage />,
+                element: <CategoryPage />,
             },
             {
                 path: 'catalog/:category',

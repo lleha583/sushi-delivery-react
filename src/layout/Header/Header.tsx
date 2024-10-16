@@ -11,7 +11,7 @@ import Modal from '../../components/Modal/Modal'
 import Notifications from '../../components/Notifications/Notifications'
 import { useSelector } from 'react-redux'
 import { IState } from '../../interface/interface'
-import Auth from '../../store/Auth/Auth'
+import Auth from '../../components/Auth/Auth'
 
 export default function Header() {
 

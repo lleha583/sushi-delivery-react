@@ -40,6 +40,51 @@
     animation-duration: 4s;
 }
 
+.modal_user_info {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 15px;
+    margin: 200px auto;
+    padding: 10px;
+
+}
+
+.modal_user_info h2 {
+    margin: 0 15%;
+}
+
+.modal_user_info label {
+    margin: 10px;
+    display: block;
+}
+
+.user_change_info_input {
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #d6d6d6;
+    padding: 4px 10px;
+    margin: 5px 20px; 
+}
+
+.user_change_info_submit {
+    width: 300px;
+    margin: 20px 10%;
+    background-color: #4ce74c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+
 @keyframes line {
     0% {
         width: 0;

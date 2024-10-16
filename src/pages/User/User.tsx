@@ -8,12 +8,14 @@ import iconUser from '../../assets/icons/icon_user.svg'
 import { useSelector } from "react-redux";
 import { IState } from "../../interface/interface";
 import iconPen from '../../assets/icons/icon_pen.svg'
+import UserChangeInfo from "../../components/Modal/UserChangeInfo";
 
 export default function User() {
 
     const user = useSelector((state: IState) => {return state.user})
 
     const [active, setActive] = useState<number | null>(null)
+    const [modal, setModal] = useState<null | number>(null)
 
 
     const changeActive = (num: number): void => {
@@ -49,17 +51,24 @@ export default function User() {
                     <p>Адрес доставки</p>
                 </Link>
                 <div className="user_status">
-                    <img src={iconUser} />
+                    <div className="user_status_info">
+
+                    <img 
+                        className="user_status_info_icon" 
+                        src={iconUser}
+                        alt="user icon"
+                    />
                     <div>
                         <h3>{user.data.username}</h3>
                         <p>{user.data.email}</p>
                         <span>+{user.data.number}</span>
                     </div>
+                    </div>
                     <img 
-                        onClick={()=>{console.log('asd')}} 
+                        onClick={()=>{setModal(1)}} 
                         className="user_status_change" 
                         src={iconPen} 
-                        alt="" 
+                        alt="change info" 
                     />
                 </div>
             </nav>
@@ -67,6 +76,9 @@ export default function User() {
             <div className="user_children">
                 <Outlet />
             </div>
+            {
+                (modal && <UserChangeInfo setModal={setModal} user={user} />)
+            }
         </section>
     );
 }

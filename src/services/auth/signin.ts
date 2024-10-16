@@ -1,10 +1,9 @@
 import axios from "axios";
 
-interface ISignin {
-    formdata: { 
-        email: string, 
-        password: string 
-    }
+interface ISignin { 
+    email: string, 
+    password: string 
+
 }
 
 export const signin = (formData: ISignin) => {

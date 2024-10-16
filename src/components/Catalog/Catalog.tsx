@@ -17,7 +17,7 @@ export default function Catalog({ type, page = 1 }: { type: string, page?:number
 
     const changeFavorite = (item: IProduct) => {
         addFavorite(item)
-}
+    }
     
     const setNewProduct = (item: IProduct) => {
 
@@ -29,8 +29,12 @@ export default function Catalog({ type, page = 1 }: { type: string, page?:number
 
     useEffect(() => {
         axios.get(`http://127.0.0.1:8000/commands/product/foods/${page}?type_food=${type}`)
-            .then((res)=>{setFoodList([...res.data.detail])})
+            .then((res)=>{
+                setFoodList([...res.data.detail])
+                console.log(res);
+            })
     }, [type, page])
+
 
     return (
         <section>

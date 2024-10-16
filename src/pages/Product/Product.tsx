@@ -26,12 +26,15 @@ export default function Product() {
         weight: 0
     })
     const [productSet, setProductSet] = useState<IProduct[]>([])
+    console.log(params.category);
 
     useEffect(()=> {
-        const category = (params.category === undefined) ? 'set' : 'food';
+        const category = (params.category === 'set') ? 'set' : 'food';
+        console.log(category);
         
         axios.get(`http://127.0.0.1:8000/commands/product/${category}?${category}_id=${params.product}`)
         .then((res) => {
+            console.log(res);
             setProduct({...res.data.detail})
             if(category === 'set') {
                 res.data.detail.food_in_set.map((item: number) => {
