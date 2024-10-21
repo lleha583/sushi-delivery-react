@@ -33,9 +33,8 @@ export interface IUser {
 export interface INews {
     id: number,
     title: string,
-    img: string,
+    image_url: string,
     body: string,
-    date: string
 }
 
 export interface IState {

@@ -9,8 +9,6 @@ import Carusel from "../../components/Carusel/Carucel"
 
 export default function Main() {
 
-
-
     return (
         <div className="main">
             <Carusel />

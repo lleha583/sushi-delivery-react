@@ -14,6 +14,7 @@ import { lazy, Suspense } from "react";
 import PageNotFound from "../components/PageNotFound";
 
 const News = lazy(() => {return import("../pages/News/News");})
+const NewsPage = lazy(() => {return import("../pages/News/NewsPage/NewsPage")})
 
 export const route  = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ export const route  = createBrowserRouter([
             {
                 path: 'news',
                 element: <Suspense><News /></Suspense>,
+            },
+            {
+                path: 'news/:id',
+                element: <Suspense><NewsPage /></Suspense>,
             },
             {
                 path: 'delivery',

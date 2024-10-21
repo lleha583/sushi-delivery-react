@@ -12,7 +12,6 @@ interface IProps {
 export default function CheckoutForm({user, order, setOrder }: IProps) {
     
     return useMemo(() => {
-        console.log('asdf');
         const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
             const { name, value } = e.target;
             setOrder({

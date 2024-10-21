@@ -1,0 +1,25 @@
+.news_page_img {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.news_page_img img {
+    width: 800px;
+    height: 400px;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.news_page_content h2 {
+    width: 1200px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.news_page_content p {
+    width: 1200px;
+    margin: 50px auto;
+    line-height: 2.5;
+}

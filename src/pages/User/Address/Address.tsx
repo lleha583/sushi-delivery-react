@@ -8,7 +8,6 @@ import { changeAddress } from '../../../services/user/changeAddress'
 export default function Address() {
 
     const location = useLocation()
-    console.log(location);
 
     const [address, setAddress] = useState<string[]>([])
     const [newAddress, setNewAddress] = useState(false)
